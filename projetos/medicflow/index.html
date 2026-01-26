@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MedicFlow | Projeto | André Blos Aliatti</title>
+  <meta name="description" content="Case do MedicFlow: plataforma web com frontend, backend, APIs e arquitetura documentada." />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/css/global.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="header">
+    <div class="container header-row">
+      <a class="brand" href="/" aria-label="Voltar para Home">
+        <img class="brand-logo" src="/assets/img/logo-horizontal.svg" alt="André Blos Aliatti" onerror="this.style.display='none'">
+        <span class="brand-text">André Blos</span>
+      </a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navPanel">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <nav class="nav-panel" id="navPanel" hidden>
+      <div class="container nav-inner">
+        <a class="nav-link" href="/sobre/">Sobre</a>
+        <a class="nav-link" href="/projetos/">Projetos</a>
+        <a class="nav-link" href="/blog/">Blog</a>
+        <a class="nav-link nav-cta" href="/contato/">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo" class="main">
+    <section class="section hero">
+      <div class="container">
+        <p class="eyebrow">PROJETO</p>
+        <h1 class="h1">MedicFlow <span class="h1-accent">plataforma de gestão clínica</span></h1>
+        <p class="lead">Placeholder: problema → solução → valor entregue. 2–3 linhas bem objetivas.</p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="/links/">Ver repositório</a>
+          <a class="btn ghost" href="/links/">Ver demo</a>
+        </div>
+
+        <div class="chips">
+          <span class="chip">Web</span><span class="chip">Frontend</span><span class="chip">Backend</span><span class="chip">APIs</span><span class="chip">SaaS</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="h2">Em resumo</h2>
+        <article class="card">
+          <ul class="muted" style="padding-left:18px;">
+            <li>Para quem é: (ex.: clínicas, consultórios)</li>
+            <li>Problema: (ex.: processos manuais, retrabalho)</li>
+            <li>Impacto: (ex.: centralização, automação, produtividade)</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="h2">Principais funcionalidades</h2>
+        <div class="cards">
+          <article class="card"><h3 class="h3">Agenda</h3><p class="muted">Agendamentos e fluxo de atendimento.</p></article>
+          <article class="card"><h3 class="h3">Prontuário</h3><p class="muted">Registro clínico e histórico.</p></article>
+          <article class="card"><h3 class="h3">Automação</h3><p class="muted">Mensagens e integrações.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="h2">Stack</h2>
+        <div class="chips">
+          <span class="chip">HTML/CSS/JS</span><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">PostgreSQL</span><span class="chip">Docker</span><span class="chip">REST</span>
+        </div>
+
+        <article class="card" style="margin-top:12px;">
+          <p class="muted">Placeholder: notas rápidas sobre arquitetura, camadas, integrações e deploy.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="h2">Arquitetura</h2>
+        <article class="card">
+          <p class="muted">Placeholder: aqui entra um diagrama (imagem/SVG) + bullets do fluxo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="h2">Decisões técnicas</h2>
+        <article class="card">
+          <ul class="muted" style="padding-left:18px;">
+            <li>Por que essa stack</li>
+            <li>Trade-offs e escolhas</li>
+            <li>Próximos passos</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="links-title">
+      <div class="container">
+        <h2 class="h2" id="links-title">Links</h2>
+        <div class="social-grid">
+          <a class="social" href="#" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="social" href="#" target="_blank" rel="noreferrer">Demo</a>
+          <a class="social" href="#" target="_blank" rel="noreferrer">Docs</a>
+          <a class="social" href="#" target="_blank" rel="noreferrer">Post LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-row">
+          <a class="btn primary" href="/contato/">Entrar em contato</a>
+          <a class="btn ghost" href="/projetos/">Voltar aos projetos</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> André Blos Aliatti</p>
+      <a class="link" href="/projetos/">Projetos</a>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

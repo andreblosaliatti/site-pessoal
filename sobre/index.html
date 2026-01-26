@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sobre | André Blos Aliatti</title>
+  <meta name="description" content="Conheça André Blos Aliatti — desenvolvedor web full stack, focado em projetos web, frontend e backend." />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/css/global.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="header">
+    <div class="container header-row">
+      <a class="brand" href="/" aria-label="Voltar para Home">
+        <img class="brand-logo" src="/assets/img/logo-horizontal.svg" alt="André Blos Aliatti" onerror="this.style.display='none'">
+        <span class="brand-text">André Blos</span>
+      </a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navPanel">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <nav class="nav-panel" id="navPanel" hidden>
+      <div class="container nav-inner">
+        <a class="nav-link" href="/sobre/">Sobre</a>
+        <a class="nav-link" href="/projetos/">Projetos</a>
+        <a class="nav-link" href="/blog/">Blog</a>
+        <a class="nav-link nav-cta" href="/contato/">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo" class="main">
+    <section class="section hero">
+      <div class="container">
+        <p class="eyebrow">SOBRE</p>
+        <h1 class="h1">André Blos Aliatti <span class="h1-accent">desenvolvedor web full stack</span></h1>
+        <p class="lead">Aqui vai uma bio curta e direta, posicionando você como full stack (web, frontend e backend).</p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="/projetos/">Ver projetos</a>
+          <a class="btn ghost" href="/contato/">Falar comigo</a>
+        </div>
+
+        <div class="chips">
+          <span class="chip">Web</span><span class="chip">Frontend</span><span class="chip">Backend</span><span class="chip">APIs</span><span class="chip">Arquitetura</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="quem-title">
+      <div class="container">
+        <h2 class="h2" id="quem-title">Quem sou</h2>
+        <article class="card">
+          <p class="muted">Placeholder: 2–3 parágrafos contando sua trajetória e foco atual, sem exagerar e sem “estou aprendendo”.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="como-title">
+      <div class="container">
+        <h2 class="h2" id="como-title">Como eu trabalho</h2>
+        <div class="cards">
+          <article class="card">
+            <h3 class="h3">Mobile first</h3>
+            <p class="muted">Começo pelo essencial no mobile e evoluo para desktop.</p>
+          </article>
+          <article class="card">
+            <h3 class="h3">Clareza técnica</h3>
+            <p class="muted">Estrutura organizada, decisões explícitas e documentação.</p>
+          </article>
+          <article class="card">
+            <h3 class="h3">Foco em produto</h3>
+            <p class="muted">Entregar valor real, não só código.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="redes-title">
+      <div class="container">
+        <h2 class="h2" id="redes-title">Minhas redes</h2>
+        <div class="social-grid">
+          <a class="social" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="social" href="#" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="social" href="#" target="_blank" rel="noreferrer">YouTube</a>
+          <a class="social" href="#" target="_blank" rel="noreferrer">Instagram</a>
+          <a class="social" href="#" target="_blank" rel="noreferrer">Medium</a>
+          <a class="social" href="#" target="_blank" rel="noreferrer">Dev.to</a>
+          <a class="social" href="#" target="_blank" rel="noreferrer">X</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-row">
+          <a class="btn primary" href="/contato/">Entrar em contato</a>
+          <a class="btn ghost" href="/curriculo/">Ver currículo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> André Blos Aliatti</p>
+      <a class="link" href="/">Home</a>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

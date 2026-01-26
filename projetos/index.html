@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projetos | André Blos Aliatti</title>
+  <meta name="description" content="Projetos e cases de André Blos Aliatti: desenvolvimento web, frontend e backend." />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/css/global.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="header">
+    <div class="container header-row">
+      <a class="brand" href="/" aria-label="Voltar para Home">
+        <img class="brand-logo" src="/assets/img/logo-horizontal.svg" alt="André Blos Aliatti" onerror="this.style.display='none'">
+        <span class="brand-text">André Blos</span>
+      </a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navPanel">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <nav class="nav-panel" id="navPanel" hidden>
+      <div class="container nav-inner">
+        <a class="nav-link" href="/sobre/">Sobre</a>
+        <a class="nav-link" href="/projetos/">Projetos</a>
+        <a class="nav-link" href="/blog/">Blog</a>
+        <a class="nav-link nav-cta" href="/contato/">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo" class="main">
+    <section class="section hero">
+      <div class="container">
+        <p class="eyebrow">PROJETOS</p>
+        <h1 class="h1">Projetos & cases <span class="h1-accent">web, frontend e backend</span></h1>
+        <p class="lead">Projetos desenvolvidos com foco em produto, arquitetura, performance e documentação.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="h2">Filtrar por</h2>
+        <div class="chips" aria-label="Filtros">
+          <span class="chip">Todos</span>
+          <span class="chip">Web</span>
+          <span class="chip">Frontend</span>
+          <span class="chip">Backend</span>
+          <span class="chip">APIs</span>
+          <span class="chip">SaaS</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="lista-title">
+      <div class="container">
+        <h2 class="h2" id="lista-title">Lista de projetos</h2>
+
+        <div class="project-list">
+          <article class="project">
+            <div class="project-top">
+              <h3 class="h3">MedicFlow</h3>
+              <span class="badge">SaaS</span>
+            </div>
+            <p class="muted">Plataforma de gestão clínica com prontuário, agenda e automações.</p>
+            <div class="tags">
+              <span class="tag">Web</span><span class="tag">Frontend</span><span class="tag">Backend</span><span class="tag">APIs</span>
+            </div>
+            <div class="project-actions">
+              <a class="btn small" href="/projetos/medicflow/">Ver case</a>
+              <a class="btn small ghost" href="/links/">GitHub</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <h3 class="h3">FinanceFlow</h3>
+              <span class="badge">App</span>
+            </div>
+            <p class="muted">Controle financeiro com foco em organização e relatórios.</p>
+            <div class="tags">
+              <span class="tag">Web</span><span class="tag">Dados</span><span class="tag">Arquitetura</span>
+            </div>
+            <div class="project-actions">
+              <a class="btn small" href="/projetos/">Ver case</a>
+              <a class="btn small ghost" href="/links/">GitHub</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <h3 class="h3">CarrosTop</h3>
+              <span class="badge">UI</span>
+            </div>
+            <p class="muted">Interface web com componentização e navegação fluida.</p>
+            <div class="tags">
+              <span class="tag">Frontend</span><span class="tag">UI</span><span class="tag">Performance</span>
+            </div>
+            <div class="project-actions">
+              <a class="btn small" href="/projetos/">Ver case</a>
+              <a class="btn small ghost" href="/links/">Demo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="card">
+          <h2 class="h2">Sobre os projetos</h2>
+          <p class="muted">Este portfólio reúne projetos de desenvolvimento web, frontend e backend, com foco em aplicações reais e documentação clara.</p>
+        </article>
+
+        <div class="cta-row" style="margin-top:14px;">
+          <a class="btn primary" href="/contato/">Entrar em contato</a>
+          <a class="btn ghost" href="/curriculo/">Ver currículo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> André Blos Aliatti</p>
+      <a class="link" href="/">Home</a>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

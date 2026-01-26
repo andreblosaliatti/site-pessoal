@@ -1,0 +1,42 @@
+<!-- /assets/img/bg-polygons.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="fade" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#f3f4f6" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#fade)"/>
+
+  <!-- polígonos bem leves -->
+  <g opacity="0.55" filter="url(#soft)">
+    <polygon points="0,120 240,0 420,160 180,280" fill="#ffffff"/>
+    <polygon points="420,160 650,40 820,220 560,330" fill="#f9fafb"/>
+    <polygon points="820,220 1040,80 1240,260 980,380" fill="#ffffff"/>
+    <polygon points="1240,260 1600,120 1600,420 1360,460" fill="#f7f7f8"/>
+
+    <polygon points="0,360 220,280 460,420 180,560" fill="#f8fafc"/>
+    <polygon points="460,420 720,320 940,480 680,610" fill="#ffffff"/>
+    <polygon points="940,480 1200,380 1420,540 1120,680" fill="#f8fafb"/>
+    <polygon points="1420,540 1600,460 1600,780 1360,760" fill="#ffffff"/>
+
+    <polygon points="0,720 240,600 480,760 220,900 0,900" fill="#ffffff"/>
+    <polygon points="480,760 760,610 980,780 720,900 520,900" fill="#f8fafc"/>
+    <polygon points="980,780 1240,680 1500,840 1260,900 980,900" fill="#ffffff"/>
+  </g>
+
+  <!-- linhas “facetas” bem sutis -->
+  <g opacity="0.12">
+    <path d="M0 120 L420 160 L180 280 Z" fill="none" stroke="#111827" stroke-width="1"/>
+    <path d="M420 160 L820 220 L560 330 Z" fill="none" stroke="#111827" stroke-width="1"/>
+    <path d="M820 220 L1240 260 L980 380 Z" fill="none" stroke="#111827" stroke-width="1"/>
+    <path d="M0 360 L460 420 L180 560 Z" fill="none" stroke="#111827" stroke-width="1"/>
+    <path d="M460 420 L940 480 L680 610 Z" fill="none" stroke="#111827" stroke-width="1"/>
+    <path d="M940 480 L1420 540 L1120 680 Z" fill="none" stroke="#111827" stroke-width="1"/>
+  </g>
+</svg>

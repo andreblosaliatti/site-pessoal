@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Arquitetura Web na Prática | André Blos Aliatti</title>
+  <meta name="description" content="Como organizo projetos web reais, do frontend ao backend, com foco em arquitetura e clareza." />
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/css/global.css" />
+</head>
+
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="header">
+  <div class="container header-row">
+    <a class="brand" href="/">
+      <span class="brand-text">André Blos</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navPanel">
+      <span class="menu-icon"></span>
+    </button>
+  </div>
+
+  <nav class="nav-panel" id="navPanel" hidden>
+    <div class="container nav-inner">
+      <a class="nav-link" href="/blog/">Blog</a>
+      <a class="nav-link" href="/projetos/">Projetos</a>
+      <a class="nav-link nav-cta" href="/contato/">Contato</a>
+    </div>
+  </nav>
+</header>
+
+<main id="conteudo" class="main">
+  <section class="section hero">
+    <div class="container">
+      <p class="eyebrow">ARTIGO</p>
+      <h1 class="h1">
+        Arquitetura web na prática
+        <span class="h1-accent">como organizo projetos reais</span>
+      </h1>
+      <p class="muted">25 jan 2026 • 7 min de leitura</p>
+
+      <div class="chips">
+        <span class="chip">Web</span>
+        <span class="chip">Backend</span>
+        <span class="chip">Arquitetura</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <article class="card">
+        <h2 class="h3">TL;DR</h2>
+        <ul>
+          <li>Organização clara de pastas</li>
+          <li>Separação frontend / backend</li>
+          <li>Decisões técnicas documentadas</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="h2">Introdução</h2>
+      <p>Texto do artigo aqui. Conteúdo longo, parágrafos simples e leitura confortável.</p>
+
+      <h2 class="h2">Estrutura de projeto</h2>
+      <p>Explicação sobre organização de arquivos, camadas e responsabilidades.</p>
+
+      <h2 class="h2">Decisões técnicas</h2>
+      <p>Trade-offs, escolhas de stack e aprendizados.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="h2">Relacionado</h2>
+
+      <div class="project-list">
+        <article class="project">
+          <h3 class="h3">MedicFlow</h3>
+          <p class="muted">Plataforma web completa.</p>
+          <a class="btn small" href="/projetos/medicflow/">Ver case</a>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> André Blos Aliatti</p>
+    <a class="link" href="/blog/">Voltar ao blog</a>
+  </div>
+</footer>
+
+<script src="/js/app.js"></script>
+</body>
+</html>

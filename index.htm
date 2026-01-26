@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>André Blos Aliatti | Desenvolvedor Web Full Stack</title>
+  <meta name="description" content="Portfólio de André Blos Aliatti — projetos web, frontend e backend. Cases, artigos e contato." />
+
+  <meta name="author" content="André Blos Aliatti" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="André Blos Aliatti | Desenvolvedor Web Full Stack" />
+  <meta property="og:description" content="Projetos, cases e conteúdo técnico sobre frontend e backend." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/img/og-default.png" />
+  <!-- Web Awesome (CDN correto) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/styles/themes/default.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/webawesome.loader.js"></script>
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/css/global.css" />
+</head>
+
+<body>
+  <div class="container">
+      <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+      <header class="header">
+        <div class="container header-row">
+          <a class="brand" href="/" aria-label="Voltar para Home">
+            <img class="brand-logo" src="assets/img/logo-andre-transp.png" alt="André Blos Aliatti" onerror="this.style.display='none'">
+            <span class="brand-text">André Blos Aliatti</span>
+          </a>
+          <!-- NAV DESKTOP (estilo print) -->
+          <nav class="nav-desktop" aria-label="Navegação principal">
+            <a class="nav-link-desktop" href="/sobre/">Sobre</a>
+            <a class="nav-link-desktop" href="/projetos/">Portfólio</a>
+            <a class="nav-link-desktop" href="/blog/">Blog</a>
+            <a class="nav-link-desktop" href="/contato/">Contato</a>
+          </nav>
+          <!-- MENU MOBILE -->
+          <button
+            class="menu-btn"
+            id="menuBtn"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="navPanel"
+          >
+            <wa-icon name="bars"></wa-icon>
+          </button>
+        </div>
+        <nav class="nav-panel" id="navPanel" hidden>
+          <div class="container nav-inner">
+            <a class="nav-link" href="/sobre/">Sobre</a>
+            <a class="nav-link" href="/projetos/">Projetos</a>
+            <a class="nav-link" href="/blog/">Blog</a>
+            <a class="nav-link nav-cta" href="/contato/">Contato</a>
+          </div>
+        </nav>
+      </header>
+      <main id="conteudo" class="main">
+        <!-- HERO (mais parecido com o print: limpo e com respiro) -->
+        <section class="section hero">
+          <div class="container">
+            <h1 class="h1">
+              ANDRÉ BLOS ALIATTI
+              <span class="h1-accent">Web. Frontend. Backend.</span>
+            </h1>
+            <p class="lead">
+              Construo soluções web completas — interfaces modernas e backends bem estruturados —
+              com foco em performance, clareza e evolução contínua.
+            </p>
+            <div class="hero-actions">
+              <a class="btn primary" href="/projetos/">Conheça meu trabalho</a>
+            </div>
+          </div>
+        </section>
+        <!-- SOBRE MIM (igual print: foto à esquerda no desktop) -->
+        <section class="section" aria-labelledby="sobre-title">
+          <div class="container">
+            <h2 class="h2" id="sobre-title">Sobre mim</h2>
+            <div class="about">
+              <div class="about-photo">
+                <img src="assets/img/foto-andre.png" alt="Foto de André Blos Aliatti">
+              </div>
+              <div class="about-copy">
+                <p class="muted">
+                  Desenvolvedor web com foco em projetos completos, combinando frontend bem cuidado
+                  e backend consistente. Gosto de organizar sistemas pensando em clareza e evolução.
+                </p>
+                <ul class="about-list">
+                  <li>Web apps e interfaces responsivas</li>
+                  <li>APIs e regras de negócio</li>
+                  <li>Arquitetura, padrões e organização</li>
+                  <li>Documentação e comunicação técnica</li>
+                </ul>
+                <a class="btn primary small" href="/sobre/">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- PORTFÓLIO (B: projetos reais, com estética do print) -->
+        <section class="section" aria-labelledby="projetos-title">
+          <div class="container">
+            <div class="section-head">
+              <h2 class="h2" id="projetos-title">Portfólio</h2>
+              <a class="link" href="/projetos/">Ver todos →</a>
+            </div>
+            <div class="project-list">
+              <article class="project">
+                <div class="project-cover">
+                  <!-- placeholder thumb -->
+                  <img src="/assets/img/projects/medicflow.png" alt="Preview do projeto MedicFlow">
+                </div>
+                <div class="project-top">
+                  <h3 class="h3">MedicFlow</h3>
+                  <span class="badge">SaaS</span>
+                </div>
+                <p class="muted">Plataforma de gestão clínica com prontuário, agenda e automações.</p>
+                <div class="tags">
+                  <span class="tag">Web</span>
+                  <span class="tag">Frontend</span>
+                  <span class="tag">Backend</span>
+                </div>
+                <div class="project-actions">
+                  <a class="btn small" href="/projetos/medicflow/">Ver case</a>
+                  <a class="btn small ghost" href="/links/">Links</a>
+                </div>
+              </article>
+              <article class="project">
+                <div class="project-cover">
+                  <img src="/assets/img/projects/financeflow.png" alt="Preview do projeto FinanceFlow">
+                </div>
+                <div class="project-top">
+                  <h3 class="h3">FinanceFlow</h3>
+                  <span class="badge">App</span>
+                </div>
+                <p class="muted">Controle financeiro com foco em organização e relatórios.</p>
+                <div class="tags">
+                  <span class="tag">Web</span>
+                  <span class="tag">Dados</span>
+                  <span class="tag">Arquitetura</span>
+                </div>
+                <div class="project-actions">
+                  <a class="btn small" href="/projetos/financeflow/">Ver case</a>
+                  <a class="btn small ghost" href="/links/">Links</a>
+                </div>
+              </article>
+              <article class="project">
+                <div class="project-cover">
+                  <img src="/assets/img/projects/carrostop.png" alt="Preview do projeto CarrosTop">
+                </div>
+                <div class="project-top">
+                  <h3 class="h3">CarrosTop</h3>
+                  <span class="badge">UI</span>
+                </div>
+                <p class="muted">Interface web com componentização e navegação fluida.</p>
+                <div class="tags">
+                  <span class="tag">Frontend</span>
+                  <span class="tag">UI</span>
+                  <span class="tag">Performance</span>
+                </div>
+                <div class="project-actions">
+                  <a class="btn small" href="/projetos/carrostop/">Ver case</a>
+                  <a class="btn small ghost" href="/links/">Demo</a>
+                </div>
+              </article>
+            </div>
+            <div class="cta-row">
+              <a class="btn primary" href="/contato/">Vamos conversar</a>
+              <a class="btn ghost" href="/curriculo/">Ver currículo</a>
+            </div>
+          </div>
+        </section>
+        <!-- BLOG (3 colunas no desktop como no print) -->
+        <section class="section" aria-labelledby="blog-title">
+          <div class="container">
+            <div class="section-head">
+              <h2 class="h2" id="blog-title">Blog</h2>
+              <a class="link" href="/blog/">Ver blog →</a>
+            </div>
+            <div class="posts">
+              <article class="post">
+                <h3 class="h3">Além do código: pensar como um engenheiro</h3>
+                <p class="muted">Como estruturo decisões e trade-offs em projetos reais.</p>
+                <a class="link" href="/blog/">Leia mais →</a>
+              </article>
+              <article class="post">
+                <h3 class="h3">Segredos para sistemas backend em produção</h3>
+                <p class="muted">Práticas para robustez, logs e evolução sem dor.</p>
+                <a class="link" href="/blog/">Leia mais →</a>
+              </article>
+              <article class="post">
+                <h3 class="h3">Comunicação técnica e clareza</h3>
+                <p class="muted">Documentação simples que melhora times e projetos.</p>
+                <a class="link" href="/blog/">Leia mais →</a>
+              </article>
+            </div>
+          </div>
+        </section>
+        <!-- REDES (deixa, mas discreto) -->
+        <section class="section" aria-labelledby="redes-title">
+          <div class="container">
+            <h2 class="h2" id="redes-title">Minhas redes</h2>
+            <p class="muted">Acompanhe projetos e conteúdo.</p>
+            <div class="social-grid">
+              <a class="social" href="/links/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="social" href="/links/" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="social" href="/links/" target="_blank" rel="noreferrer">YouTube</a>
+              <a class="social" href="/links/" target="_blank" rel="noreferrer">Instagram</a>
+              <a class="social" href="/links/" target="_blank" rel="noreferrer">Medium</a>
+              <a class="social" href="/links/" target="_blank" rel="noreferrer">Dev.to</a>
+              <a class="social" href="/links/" target="_blank" rel="noreferrer">X</a>
+            </div>
+          </div>
+        </section>
+        <!-- CTA FINAL -->
+        <section class="section" aria-labelledby="contato-title">
+          <div class="container">
+            <h2 class="h2" id="contato-title">Vamos conversar?</h2>
+            <p class="muted">Quer trocar uma ideia sobre um projeto ou oportunidade?</p>
+            <div class="cta-row">
+              <a class="btn primary" href="/contato/">Entrar em contato</a>
+              <a class="btn ghost" href="/links/">Ver links</a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container footer-inner">
+          <p>© <span id="year"></span> André Blos Aliatti</p>
+          <a class="link" href="/links/">/links</a>
+        </div>
+      </footer>
+      <script src="/js/app.js"></script>
+  </div>
+</body>
+</html>
