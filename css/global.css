@@ -304,6 +304,11 @@ p{ margin: 0 0 var(--space-3); }
   border-color: #111827;
 }
 
+.btn.primary:hover{
+  background: #fff;
+  color: #111827;
+}
+
 .btn.ghost{ background: transparent; }
 
 .btn.small{
@@ -311,6 +316,10 @@ p{ margin: 0 0 var(--space-3); }
   padding: 0 12px;
   border-radius: 12px;
   font-size: .92rem;
+}
+
+.btn.small:hover, .btn.small.ghost:hover, .btn.ghost:hover{
+  text-decoration: underline;
 }
 
 /* Action rows */
@@ -425,23 +434,53 @@ p{ margin: 0 0 var(--space-3); }
 .posts{ display: grid; gap: 18px; margin-top: 12px; }
 
 /* Social */
+/* MOBILE (default) */
 .social-grid{
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 10px;
   margin-top: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 colunas no mobile */
 }
+
 .social{
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
+
   min-height: 46px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: #fff;
+  padding: 0 12px;
+
+  border-radius: 999px;
+  border: 1px solid rgba(17,24,39,.12);
+  background: rgba(255,255,255,.80);
+  backdrop-filter: blur(6px);
+
   text-decoration: none;
   font-weight: 800;
+  letter-spacing: -.01em;
 }
+
+/* TABLET+ (mais colunas conforme couber) */
+@media (min-width: 640px){
+  .social-grid{
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+}
+
+/* DESKTOP (hover só faz sentido aqui) */
+@media (hover: hover) and (pointer: fine){
+  .social{
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .social:hover{
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-strong);
+    background: rgba(255,255,255,.95);
+  }
+}
+
 
 /* About */
 
