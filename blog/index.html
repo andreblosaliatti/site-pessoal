@@ -1,93 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blog | André Blos Aliatti</title>
-  <meta name="description" content="Blog com artigos sobre desenvolvimento web, frontend, backend, APIs e arquitetura." />
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="stylesheet" href="/css/global.css" />
-</head>
-<body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <header class="header">
-    <div class="container header-row">
-      <a class="brand" href="/" aria-label="Voltar para Home">
-        <img class="brand-logo" src="/assets/img/logo-horizontal.svg" alt="André Blos Aliatti" onerror="this.style.display='none'">
-        <span class="brand-text">André Blos</span>
-      </a>
-      <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navPanel">
-        <span class="menu-icon" aria-hidden="true"></span>
-      </button>
+    <title>Blog — André Blos Aliatti</title>
+    <meta
+      name="description"
+      content="Blog de André Blos Aliatti — artigos sobre desenvolvimento de software, backend, frontend e a jornada real de recomeçar na tecnologia."
+    />
+
+    <meta name="author" content="André Blos Aliatti" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="canonical" href="https://andreblosaliatti.dev/blog/" />
+
+    <meta property="og:title" content="Blog — André Blos Aliatti" />
+    <meta
+      property="og:description"
+      content="Artigos e reflexões sobre desenvolvimento de software, projetos reais e jornada na tecnologia."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://andreblosaliatti.dev/blog/" />
+    <meta property="og:image" content="/assets/img/og-default.png" />
+
+    <!-- Web Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/styles/themes/default.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/webawesome.loader.js"
+    ></script>
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/css/global.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+      <!-- HEADER (mesmo da home, só ajustei paths de imagem p/ absoluto) -->
+      <header class="header">
+        <div class="container header-row">
+          <a class="brand" href="/" aria-label="Voltar para Home">
+            <img
+              class="brand-logo"
+              src="/assets/img/logo-andre-transp.png"
+              alt="André Blos Aliatti"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="brand-text">André Blos Aliatti</span>
+          </a>
+
+          <nav class="nav-desktop" aria-label="Navegação principal">
+            <a class="nav-link-desktop" href="/sobre/">Sobre</a>
+            <a class="nav-link-desktop" href="/projetos/">Portfólio</a>
+            <a class="nav-link-desktop" href="/blog/" aria-current="page">Blog</a>
+            <a class="nav-link-desktop" href="/contato/">Contato</a>
+          </nav>
+
+          <button
+            class="menu-btn"
+            id="menuBtn"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="navPanel"
+          >
+            <wa-icon name="bars"></wa-icon>
+          </button>
+        </div>
+
+        <nav class="nav-panel" id="navPanel" hidden>
+          <div class="container nav-inner">
+            <a class="nav-link" href="/sobre/">Sobre</a>
+            <a class="nav-link" href="/projetos/">Projetos</a>
+            <a class="nav-link" href="/blog/" aria-current="page">Blog</a>
+            <a class="nav-link nav-cta" href="/contato/">Contato</a>
+          </div>
+        </nav>
+      </header>
+
+      <main id="conteudo" class="main">
+        <!-- HERO -->
+        <section class="section hero">
+          <div class="container">
+            <h1 class="h1">
+              Blog
+              <span class="h1-accent">Artigos e reflexões — sem romantizar.</span>
+            </h1>
+            <p class="lead">
+              Textos de <strong>André Blos Aliatti</strong> sobre desenvolvimento de software,
+              projetos reais e a jornada de recomeçar na tecnologia com base e clareza.
+            </p>
+          </div>
+        </section>
+
+        <!-- POSTS -->
+        <section class="section" aria-labelledby="posts-title">
+          <div class="container">
+            <div class="section-head">
+              <h2 class="h2" id="posts-title">Posts</h2>
+            </div>
+
+            <div class="posts">
+              <!-- POST 1 -->
+              <article class="post">
+                <a
+                  class="post-cover"
+                  href="/blog/recomecar-na-ti-depois-dos-40/"
+                  aria-label="Ler artigo: Recomeçar na TI depois dos 40"
+                >
+                  <img
+                    src="/assets/img/blog/recomecar-ti-40-capa.png"
+                    alt="Capa do artigo: Recomeçar na TI depois dos 40"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+
+                <h3 class="h3">
+                  <a class="post-title" href="/blog/recomecar-na-ti-depois-dos-40/">
+                    Recomeçar na TI depois dos 40
+                  </a>
+                </h3>
+
+                <p class="muted">
+                  Uma jornada real sobre expectativa, frustração, base técnica e o que realmente sustenta uma transição de carreira.
+                </p>
+
+                <div class="post-meta muted">Jan 2026 • Carreira</div>
+
+                <a class="link" href="Recomeçar na TI depois dos 40/index.html">Ler →</a>
+              </article>
+
+              <!-- PLACEHOLDER -->
+  
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-inner">
+          <p>© <span id="year"></span> André Blos Aliatti</p>
+          <a class="link" href="/links/">/links</a>
+        </div>
+      </footer>
+
+      <script src="/js/app.js"></script>
     </div>
-
-    <nav class="nav-panel" id="navPanel" hidden>
-      <div class="container nav-inner">
-        <a class="nav-link" href="/sobre/">Sobre</a>
-        <a class="nav-link" href="/projetos/">Projetos</a>
-        <a class="nav-link" href="/blog/">Blog</a>
-        <a class="nav-link nav-cta" href="/contato/">Contato</a>
-      </div>
-    </nav>
-  </header>
-
-  <main id="conteudo" class="main">
-    <section class="section hero">
-      <div class="container">
-        <p class="eyebrow">BLOG</p>
-        <h1 class="h1">Artigos & conteúdo <span class="h1-accent">web, frontend e backend</span></h1>
-        <p class="lead">Escrevo sobre projetos reais, decisões técnicas e boas práticas de desenvolvimento web.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2 class="h2">Categorias</h2>
-        <div class="chips">
-          <span class="chip">Todos</span><span class="chip">Web</span><span class="chip">Frontend</span><span class="chip">Backend</span><span class="chip">APIs</span><span class="chip">Arquitetura</span><span class="chip">Projetos</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="posts-title">
-      <div class="container">
-        <h2 class="h2" id="posts-title">Posts</h2>
-
-        <div class="posts">
-          <article class="post">
-            <h3 class="h3">Arquitetura web na prática</h3>
-            <p class="muted">Como organizo projetos e decisões técnicas para escalar.</p>
-            <a class="link" href="/blog/arquitetura-web-na-pratica/">Ler →</a>
-          </article>
-
-          <article class="post">
-            <h3 class="h3">Frontend mobile first</h3>
-            <p class="muted">Estratégia real para começar do mobile e evoluir para desktop.</p>
-            <a class="link" href="/blog/">Ler →</a>
-          </article>
-        </div>
-
-        <article class="card" style="margin-top:14px;">
-          <h2 class="h2">Sobre este blog</h2>
-          <p class="muted">Artigos sobre desenvolvimento web, frontend, backend, APIs e arquitetura — com base em projetos reais.</p>
-        </article>
-
-        <div class="cta-row" style="margin-top:14px;">
-          <a class="btn primary" href="/projetos/">Ver projetos</a>
-          <a class="btn ghost" href="/contato/">Contato</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> André Blos Aliatti</p>
-      <a class="link" href="/">Home</a>
-    </div>
-  </footer>
-
-  <script src="/js/app.js"></script>
-</body>
+  </body>
 </html>
