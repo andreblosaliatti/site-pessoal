@@ -10,6 +10,16 @@
       content="Uma jornada real sobre expectativa, frustração, base técnica e o que realmente sustenta uma transição de carreira em tecnologia."
     />
 
+    <!-- Web Awesome (CDN correto) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/styles/themes/default.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/webawesome.loader.js"
+    ></script>
+
     <link rel="icon" href="../../favicon.ico" />
     <link rel="stylesheet" href="../../css/global.css" />
   </head>
@@ -18,32 +28,44 @@
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
     <header class="header">
-      <div class="container header-row">
-        <a class="brand" href="../../" aria-label="Voltar para Home">
-          <span class="brand-text">André Blos Aliatti</span>
-        </a>
-
-        <button
-          class="menu-btn"
-          id="menuBtn"
-          type="button"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-          aria-controls="navPanel"
-        >
-          <span class="menu-icon" aria-hidden="true"></span>
-        </button>
-      </div>
-
-      <nav class="nav-panel" id="navPanel" hidden>
-        <div class="container nav-inner">
-          <a class="nav-link" href="../../sobre/">Sobre</a>
-          <a class="nav-link" href="../../projetos/">Projetos</a>
-          <a class="nav-link" href="../">Blog</a>
-          <a class="nav-link nav-cta" href="../../contato/">Contato</a>
+        <div class="container header-row">
+          <a class="brand" href="../../index.html" aria-label="Voltar para Home">
+            <img
+              class="brand-logo"
+              src="../../assets/img/logo-andre-transp.png"
+              alt="André Blos Aliatti"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="brand-text">André Blos Aliatti</span>
+          </a>
+          <!-- NAV DESKTOP (estilo print) -->
+          <nav class="nav-desktop" aria-label="Navegação principal">
+            <a class="nav-link-desktop" href="/sobre/">Sobre</a>
+            <a class="nav-link-desktop" href="/projetos/">Portfólio</a>
+            <a class="nav-link-desktop" href="/blog/">Blog</a>
+            <a class="nav-link-desktop" href="/contato/">Contato</a>
+          </nav>
+          <!-- MENU MOBILE -->
+          <button
+            class="menu-btn"
+            id="menuBtn"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="navPanel"
+          >
+            <wa-icon name="bars"></wa-icon>
+          </button>
         </div>
-      </nav>
-    </header>
+        <nav class="nav-panel" id="navPanel" hidden>
+          <div class="container nav-inner">
+            <a class="nav-link" href="/sobre/">Sobre</a>
+            <a class="nav-link" href="/projetos/">Projetos</a>
+            <a class="nav-link" href="/blog/">Blog</a>
+            <a class="nav-link nav-cta" href="/contato/">Contato</a>
+          </div>
+        </nav>
+      </header>
 
     <main id="conteudo" class="main">
       <!-- HERO -->
@@ -367,7 +389,6 @@
     <footer class="footer">
       <div class="container footer-inner">
         <p>© <span id="year"></span> André Blos Aliatti</p>
-        <a class="link" href="../">/blog</a>
       </div>
     </footer>
 

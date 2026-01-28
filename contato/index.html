@@ -1,62 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Contato | André Blos Aliatti</title>
-  <meta name="description" content="Entre em contato com André Blos Aliatti para projetos, oportunidades ou parcerias." />
+  <title>Contato — André Blos Aliatti</title>
+  <meta
+    name="description"
+    content="Entre em contato com André Blos Aliatti para projetos web, freelas, parcerias ou oportunidades profissionais."
+  />
 
-  <link rel="icon" href="/favicon.ico" />
+  <meta name="author" content="André Blos Aliatti" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" href="/assets/favicon.png" />
   <link rel="stylesheet" href="/css/global.css" />
+
+  <!-- Web Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/styles/themes/default.css"
+  />
+  <script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/webawesome.loader.js"
+  ></script>
 </head>
 
 <body>
-<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-<header class="header">
-  <div class="container header-row">
-    <a class="brand" href="/"><span class="brand-text">André Blos</span></a>
-    <button class="menu-btn" id="menuBtn"><span class="menu-icon"></span></button>
-  </div>
-</header>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-row">
+      <a class="brand" href="/" aria-label="Voltar para a Home">
+        <span class="brand-text">André Blos</span>
+      </a>
 
-<main id="conteudo" class="main">
-  <section class="section hero">
-    <div class="container">
-      <p class="eyebrow">CONTATO</p>
-      <h1 class="h1">Vamos conversar <span class="h1-accent">sobre seu projeto</span></h1>
-      <p class="lead">Me chama para trocar uma ideia.</p>
+      <!-- NAV DESKTOP -->
+      <nav class="nav-desktop" aria-label="Navegação principal">
+        <a class="nav-link-desktop" href="/sobre/">Sobre</a>
+        <a class="nav-link-desktop" href="/projetos/">Projetos</a>
+        <a class="nav-link-desktop" href="/blog/">Blog</a>
+        <a class="nav-link-desktop" href="/contato/" aria-current="page">Contato</a>
+      </nav>
+
+      <!-- MENU MOBILE -->
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="navPanel"
+      >
+        <wa-icon name="bars"></wa-icon>
+      </button>
     </div>
-  </section>
 
-  <section class="section">
-    <div class="container">
-      <form class="form">
-        <label class="field">
-          <span>Nome</span>
-          <input type="text" />
-        </label>
-        <label class="field">
-          <span>Email</span>
-          <input type="email" />
-        </label>
-        <label class="field">
-          <span>Mensagem</span>
-          <textarea rows="4"></textarea>
-        </label>
-        <button class="btn primary">Enviar</button>
-      </form>
+    <nav class="nav-panel" id="navPanel" hidden>
+      <div class="container nav-inner">
+        <a class="nav-link" href="/sobre/">Sobre</a>
+        <a class="nav-link" href="/projetos/">Projetos</a>
+        <a class="nav-link" href="/blog/">Blog</a>
+        <a class="nav-link nav-cta" href="/contato/">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main id="conteudo" class="main">
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="container">
+        <p class="eyebrow">CONTATO</p>
+
+        <h1 class="h1">
+          Vamos conversar
+          <span class="h1-accent">sobre seu projeto</span>
+        </h1>
+
+        <p class="lead">
+          Entre em contato para projetos web, freelas, parcerias ou
+          oportunidades profissionais.
+        </p>
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO -->
+    <section class="section">
+      <div class="container">
+        <article class="card">
+          <form
+            class="form"
+            action="https://formspree.io/f/SEU_ID_AQUI"
+            method="POST"
+          >
+            <label class="field">
+              <span>Nome</span>
+              <input
+                type="text"
+                name="name"
+                placeholder="Seu nome"
+                required
+              />
+            </label>
+
+            <label class="field">
+              <span>Email</span>
+              <input
+                type="email"
+                name="email"
+                placeholder="seu@email.com"
+                required
+              />
+            </label>
+
+            <label class="field">
+              <span>Mensagem</span>
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Conte um pouco sobre o que você precisa"
+                required
+              ></textarea>
+            </label>
+
+            <!-- Anti-spam -->
+            <input type="text" name="_gotcha" style="display:none" />
+
+            <!-- Assunto do e-mail -->
+            <input
+              type="hidden"
+              name="_subject"
+              value="Novo contato pelo site"
+            />
+
+            <!-- Redirecionamento opcional -->
+            <!--
+            <input
+              type="hidden"
+              name="_redirect"
+              value="/contato/sucesso.html"
+            />
+            -->
+
+            <button class="btn primary" type="submit">
+              Enviar mensagem
+            </button>
+
+            <p class="muted" style="margin-top:10px;font-size:.9rem">
+              Normalmente respondo em até 24h úteis.
+            </p>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> André Blos Aliatti</p>
     </div>
-  </section>
-</main>
+  </footer>
 
-<footer class="footer">
-  <div class="container footer-inner">
-    <p>© <span id="year"></span> André Blos Aliatti</p>
-  </div>
-</footer>
-
-<script src="/js/app.js"></script>
+  <script src="/js/app.js"></script>
 </body>
 </html>

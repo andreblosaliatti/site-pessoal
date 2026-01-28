@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Portfólio (Curso em Vídeo) — Case | André Blos Aliatti</title>
+    <meta
+      name="description"
+      content="Case do Portfólio (Curso em Vídeo): site em HTML, CSS e JavaScript, com foco em layout, responsividade e fundamentos."
+    />
+
+    <!-- Web Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/styles/themes/default.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/webawesome.loader.js"
+    ></script>
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/css/global.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="header">
+      <div class="container header-row">
+        <a class="brand" href="/" aria-label="Voltar para Home">
+          <img
+            class="brand-logo"
+            src="/assets/img/logo-andre-transp.png"
+            alt="André Blos Aliatti"
+            onerror="this.style.display='none'"
+          />
+          <span class="brand-text">André Blos Aliatti</span>
+        </a>
+
+        <nav class="nav-desktop" aria-label="Navegação principal">
+          <a class="nav-link-desktop" href="/sobre/">Sobre</a>
+          <a class="nav-link-desktop" href="/projetos/" aria-current="page">Portfólio</a>
+          <a class="nav-link-desktop" href="/blog/">Blog</a>
+          <a class="nav-link-desktop" href="/contato/">Contato</a>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navPanel">
+          <wa-icon name="bars"></wa-icon>
+        </button>
+      </div>
+
+      <nav class="nav-panel" id="navPanel" hidden>
+        <div class="container nav-inner">
+          <a class="nav-link" href="/sobre/">Sobre</a>
+          <a class="nav-link" href="/projetos/" aria-current="page">Projetos</a>
+          <a class="nav-link" href="/blog/">Blog</a>
+          <a class="nav-link nav-cta" href="/contato/">Contato</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="conteudo" class="main">
+      <section class="section hero">
+        <div class="container">
+          <p class="eyebrow">CASE • FRONTEND</p>
+
+          <h1 class="h1">
+            Portfólio (Curso em Vídeo)
+            <span class="h1-accent">Projeto em HTML, CSS e JavaScript com foco em layout, responsividade e fundamentos.</span>
+          </h1>
+
+          <p class="muted">Jan 2026 • 3–5 min de leitura</p>
+
+          <div class="chips">
+            <span class="chip">Frontend</span>
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+          </div>
+
+          <div class="cta-row" style="margin-top: 14px">
+            <a class="btn primary" href="/links/">Ver demo / links</a>
+            <a class="btn ghost" href="/projetos/">Voltar ao portfólio</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="post-cover">
+            <img
+              src="/assets/img/projects/portfolio-guanabara.png"
+              alt="Capa do projeto Portfólio (Curso em Vídeo)"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <article class="card article">
+            <h2 class="h2">Visão geral</h2>
+            <p class="muted">
+              Esse projeto foi desenvolvido como parte do aprendizado de fundamentos de frontend, com foco em
+              <strong>HTML semântico</strong>, <strong>CSS</strong> e <strong>JavaScript</strong> para interação.
+            </p>
+
+            <h2 class="h2">O que eu pratiquei</h2>
+            <ul class="about-list">
+              <li>Estrutura HTML e boas práticas de semântica</li>
+              <li>Layout responsivo e organização de CSS</li>
+              <li>Interações simples e navegação com JavaScript</li>
+              <li>Consistência visual e hierarquia de informação</li>
+            </ul>
+
+            <h2 class="h2">Stack e tecnologias</h2>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Responsivo</span>
+            </div>
+
+            <h2 class="h2">Próximos passos</h2>
+            <ul class="about-list">
+              <li>Refinar acessibilidade (foco, contrastes, navegação)</li>
+              <li>Melhorar performance (imagens otimizadas e lazy-load)</li>
+              <li>Evoluir para componentes (base para React)</li>
+            </ul>
+
+            <div class="cta-row">
+              <a class="btn primary" href="/links/">Demo / GitHub</a>
+              <a class="btn ghost" href="/projetos/">Voltar</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> André Blos Aliatti</p>
+      </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>

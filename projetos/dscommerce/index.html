@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>DSCommerce — Case | André Blos Aliatti</title>
+    <meta
+      name="description"
+      content="Case do DSCommerce: projeto fullstack (DevSuperior) com backend Spring e frontend React, API REST, autenticação e integração."
+    />
+
+    <!-- Web Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/styles/themes/default.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/webawesome.loader.js"
+    ></script>
+
+    <link rel="icon" href="../../assets/favicon.png" />
+    <link rel="stylesheet" href="/css/global.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="header">
+      <div class="container header-row">
+        <a class="brand" href="/" aria-label="Voltar para Home">
+          <img
+            class="brand-logo"
+            src="/assets/img/logo-andre-transp.png"
+            alt="André Blos Aliatti"
+            onerror="this.style.display='none'"
+          />
+          <span class="brand-text">André Blos Aliatti</span>
+        </a>
+
+        <nav class="nav-desktop" aria-label="Navegação principal">
+          <a class="nav-link-desktop" href="/sobre/">Sobre</a>
+          <a class="nav-link-desktop" href="/projetos/" aria-current="page">Portfólio</a>
+          <a class="nav-link-desktop" href="/blog/">Blog</a>
+          <a class="nav-link-desktop" href="/contato/">Contato</a>
+        </nav>
+
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="navPanel"
+        >
+          <wa-icon name="bars"></wa-icon>
+        </button>
+      </div>
+
+      <nav class="nav-panel" id="navPanel" hidden>
+        <div class="container nav-inner">
+          <a class="nav-link" href="/sobre/">Sobre</a>
+          <a class="nav-link" href="/projetos/" aria-current="page">Projetos</a>
+          <a class="nav-link" href="/blog/">Blog</a>
+          <a class="nav-link nav-cta" href="/contato/">Contato</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="conteudo" class="main">
+      <!-- HERO -->
+      <section class="section hero">
+        <div class="container">
+          <p class="eyebrow">CASE • FULLSTACK</p>
+
+          <h1 class="h1">
+            DSCommerce
+            <span class="h1-accent"
+              >Projeto fullstack (DevSuperior) com backend Spring + frontend React, API REST e fluxo de e-commerce.</span
+            >
+          </h1>
+
+          <p class="muted">Jan 2026 • 5–7 min de leitura</p>
+
+          <div class="chips">
+            <span class="chip">Fullstack</span>
+            <span class="chip">Spring</span>
+            <span class="chip">React</span>
+            <span class="chip">REST</span>
+          </div>
+
+          <div class="cta-row" style="margin-top: 14px">
+            <a class="btn primary" href="/links/">Ver links</a>
+            <a class="btn ghost" href="/projetos/">Voltar ao portfólio</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPA -->
+      <section class="section">
+        <div class="container">
+          <div class="post-cover">
+            <img
+              src="/assets/img/projects/dscommerce.png"
+              alt="Capa do projeto DSCommerce"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTEÚDO -->
+      <section class="section">
+        <div class="container">
+          <article class="card article">
+            <h2 class="h2">Visão geral</h2>
+            <p class="muted">
+              O <strong>DSCommerce</strong> é um projeto de aprendizado fullstack (DevSuperior) que simula um e-commerce
+              com camadas bem definidas, integração entre frontend e backend e foco em padrões de API.
+            </p>
+
+            <h2 class="h2">O que eu pratiquei</h2>
+            <ul class="about-list">
+              <li>Arquitetura em camadas (Controller / Service / Repository)</li>
+              <li>API REST com DTOs e validações</li>
+              <li>Integração frontend (React) consumindo endpoints</li>
+              <li>Boas práticas: organização, consistência e clareza de código</li>
+            </ul>
+
+            <h2 class="h2">Stack e tecnologias</h2>
+            <div class="tags" aria-label="Tecnologias">
+              <span class="tag">Java</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">JPA / Hibernate</span>
+              <span class="tag">Banco relacional</span>
+              <span class="tag">React</span>
+              <span class="tag">TypeScript (opcional)</span>
+            </div>
+
+            <h2 class="h2">Destaques técnicos</h2>
+            <ul class="about-list">
+              <li>Modelagem de entidades e relacionamento</li>
+              <li>Endpoints REST com contratos consistentes</li>
+              <li>Padrões de DTO para entrada/saída</li>
+              <li>Front consumindo API com componentes reutilizáveis</li>
+            </ul>
+
+            <h2 class="h2">Próximos passos</h2>
+            <ul class="about-list">
+              <li>Refinar autenticação e perfis de acesso</li>
+              <li>Melhorar cobertura de testes (unitários e integração)</li>
+              <li>Melhorar UX e páginas do frontend</li>
+            </ul>
+
+            <div class="cta-row">
+              <a class="btn primary" href="/links/">GitHub / Demo</a>
+              <a class="btn ghost" href="/projetos/">Voltar</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> André Blos Aliatti</p>
+      </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>

@@ -468,7 +468,52 @@ p{ margin: 0 0 var(--space-3); }
   flex-wrap: wrap;
 }
 
-/* Posts */
+/* ===== CASE (página do projeto) ===== */
+.case-grid{
+  display: grid;
+  gap: 18px;
+}
+
+.case-meta{
+  display: grid;
+  gap: 10px;
+}
+
+.kv{
+  display: grid;
+  gap: 6px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255,255,255,.86);
+}
+
+.kv .label{ font-size: .85rem; color: var(--muted); }
+.kv .value{ font-weight: 800; }
+
+.case-cover{
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.case-cover img{
+  width: 100%;
+  display: block;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+}
+
+/* no desktop, conteúdo + sidebar */
+@media (min-width: 1024px){
+  .case-grid{
+    grid-template-columns: 1.6fr .9fr;
+    align-items: start;
+  }
+}
+
 /* Blog / Posts */
 .posts{
   display: grid;

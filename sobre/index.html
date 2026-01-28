@@ -1,116 +1,350 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sobre | André Blos Aliatti</title>
-  <meta name="description" content="Conheça André Blos Aliatti — desenvolvedor web full stack, focado em projetos web, frontend e backend." />
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="stylesheet" href="/css/global.css" />
-</head>
-<body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sobre | André Blos Aliatti</title>
+    <meta
+      name="description"
+      content="Conheça André Blos Aliatti — desenvolvedor web full stack, focado em projetos web, frontend e backend."
+    />
 
-  <header class="header">
-    <div class="container header-row">
-      <a class="brand" href="/" aria-label="Voltar para Home">
-        <img class="brand-logo" src="/assets/img/logo-horizontal.svg" alt="André Blos Aliatti" onerror="this.style.display='none'">
-        <span class="brand-text">André Blos</span>
-      </a>
-      <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navPanel">
-        <span class="menu-icon" aria-hidden="true"></span>
-      </button>
-    </div>
+    <meta name="author" content="André Blos Aliatti" />
+    <meta name="robots" content="index, follow" />
 
-    <nav class="nav-panel" id="navPanel" hidden>
-      <div class="container nav-inner">
-        <a class="nav-link" href="/sobre/">Sobre</a>
-        <a class="nav-link" href="/projetos/">Projetos</a>
-        <a class="nav-link" href="/blog/">Blog</a>
-        <a class="nav-link nav-cta" href="/contato/">Contato</a>
+    <meta property="og:title" content="Sobre | André Blos Aliatti" />
+    <meta
+      property="og:description"
+      content="Trajetória, foco técnico e como trabalho em projetos web e APIs."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/img/og-default.png" />
+
+    <!-- Web Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/styles/themes/default.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/webawesome.loader.js"
+    ></script>
+
+    <!-- Favicon padrão do site -->
+    <link rel="icon" href="/assets/favicon.png" />
+    <link rel="stylesheet" href="/css/global.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="header">
+      <div class="container header-row">
+        <a class="brand" href="/" aria-label="Voltar para Home">
+          <img
+            class="brand-logo"
+            src="/assets/img/logo-andre-transp.png"
+            alt="André Blos Aliatti"
+            onerror="this.style.display = 'none'"
+          />
+          <span class="brand-text">André Blos Aliatti</span>
+        </a>
+
+        <!-- NAV DESKTOP -->
+        <nav class="nav-desktop" aria-label="Navegação principal">
+          <a class="nav-link-desktop" href="/sobre/" aria-current="page"
+            >Sobre</a
+          >
+          <a class="nav-link-desktop" href="/projetos/">Portfólio</a>
+          <a class="nav-link-desktop" href="/blog/">Blog</a>
+          <a class="nav-link-desktop" href="/contato/">Contato</a>
+        </nav>
+
+        <!-- MENU MOBILE -->
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="navPanel"
+        >
+          <wa-icon name="bars"></wa-icon>
+        </button>
       </div>
-    </nav>
-  </header>
 
-  <main id="conteudo" class="main">
-    <section class="section hero">
-      <div class="container">
-        <p class="eyebrow">SOBRE</p>
-        <h1 class="h1">André Blos Aliatti <span class="h1-accent">desenvolvedor web full stack</span></h1>
-        <p class="lead">Aqui vai uma bio curta e direta, posicionando você como full stack (web, frontend e backend).</p>
-
-        <div class="hero-actions">
-          <a class="btn primary" href="/projetos/">Ver projetos</a>
-          <a class="btn ghost" href="/contato/">Falar comigo</a>
+      <nav class="nav-panel" id="navPanel" hidden>
+        <div class="container nav-inner">
+          <a class="nav-link" href="/sobre/" aria-current="page">Sobre</a>
+          <a class="nav-link" href="/projetos/">Projetos</a>
+          <a class="nav-link" href="/blog/">Blog</a>
+          <a class="nav-link nav-cta" href="/contato/">Contato</a>
         </div>
+      </nav>
+    </header>
 
-        <div class="chips">
-          <span class="chip">Web</span><span class="chip">Frontend</span><span class="chip">Backend</span><span class="chip">APIs</span><span class="chip">Arquitetura</span>
+    <main id="conteudo" class="main">
+      <!-- HERO -->
+      <section class="section hero">
+        <div class="container">
+          <p class="eyebrow">SOBRE</p>
+
+          <h1 class="h1">
+            André Blos Aliatti
+            <span class="h1-accent">Desenvolvedor Web Full Stack</span>
+          </h1>
+
+          <p class="lead">
+            Eu construo aplicações web completas — do layout e experiência do
+            usuário até a API e regras de negócio — com foco em clareza,
+            organização, performance e evolução contínua.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="/projetos/">Ver projetos</a>
+            <a class="btn ghost" href="/contato/">Falar comigo</a>
+          </div>
+
+          <div class="chips" aria-label="Áreas e temas">
+            <span class="chip">Web</span>
+            <span class="chip">Frontend</span>
+            <span class="chip">Backend</span>
+            <span class="chip">APIs</span>
+            <span class="chip">Arquitetura</span>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section" aria-labelledby="quem-title">
-      <div class="container">
-        <h2 class="h2" id="quem-title">Quem sou</h2>
-        <article class="card">
-          <p class="muted">Placeholder: 2–3 parágrafos contando sua trajetória e foco atual, sem exagerar e sem “estou aprendendo”.</p>
-        </article>
-      </div>
-    </section>
+      <!-- QUEM SOU -->
+      <section class="section" aria-labelledby="quem-title">
+        <div class="container">
+          <h2 class="h2" id="quem-title">Quem sou</h2>
 
-    <section class="section" aria-labelledby="como-title">
-      <div class="container">
-        <h2 class="h2" id="como-title">Como eu trabalho</h2>
-        <div class="cards">
           <article class="card">
-            <h3 class="h3">Mobile first</h3>
-            <p class="muted">Começo pelo essencial no mobile e evoluo para desktop.</p>
-          </article>
-          <article class="card">
-            <h3 class="h3">Clareza técnica</h3>
-            <p class="muted">Estrutura organizada, decisões explícitas e documentação.</p>
-          </article>
-          <article class="card">
-            <h3 class="h3">Foco em produto</h3>
-            <p class="muted">Entregar valor real, não só código.</p>
+            <p class="muted">
+              Eu sou o André — engenheiro de software em transição de carreira,
+              construindo base técnica sólida e projetos reais. Em 2024, aos 41
+              anos, eu decidi recomeçar na tecnologia de forma séria: não como
+              hobby, mas como um caminho profissional.
+            </p>
+
+            <p class="muted">
+              Minha trajetória anterior me deu um repertório grande em
+              comunicação, estratégia, organização e execução. Só que, na
+              prática, o que me trouxe para a programação foi o mesmo impulso de
+              sempre: entender como as coisas funcionam, estruturar sistemas e
+              transformar ideias em algo que roda, resolve problema e pode
+              evoluir.
+            </p>
+
+            <p class="muted">
+              Hoje atuo como desenvolvedor web full stack, criando sites,
+              sistemas e aplicações web que funcionam de ponta a ponta. Gosto de
+              entender o problema antes do código e transformar ideias em
+              soluções simples, organizadas e sustentáveis.
+            </p>
           </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section" aria-labelledby="redes-title">
-      <div class="container">
-        <h2 class="h2" id="redes-title">Minhas redes</h2>
-        <div class="social-grid">
-          <a class="social" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="social" href="#" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="social" href="#" target="_blank" rel="noreferrer">YouTube</a>
-          <a class="social" href="#" target="_blank" rel="noreferrer">Instagram</a>
-          <a class="social" href="#" target="_blank" rel="noreferrer">Medium</a>
-          <a class="social" href="#" target="_blank" rel="noreferrer">Dev.to</a>
-          <a class="social" href="#" target="_blank" rel="noreferrer">X</a>
+      <!-- FOCO TÉCNICO -->
+      <section class="section" aria-labelledby="foco-title">
+        <div class="container">
+          <h2 class="h2" id="foco-title">Foco técnico hoje</h2>
+
+          <div class="cards">
+            <article class="card">
+              <h3 class="h3">Backend (minha base principal)</h3>
+              <p class="muted">
+                Java + Spring Boot, APIs REST, JPA/Hibernate, PostgreSQL,
+                validações, DTOs, organização em camadas
+                (Controller/Service/Repository) e boas práticas de modelagem.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3 class="h3">Frontend (UI limpa e consistente)</h3>
+              <p class="muted">
+                HTML, CSS e JavaScript com mentalidade mobile-first, e evolução
+                para interfaces em React quando faz sentido. Gosto de
+                componentes simples, tipografia bem cuidada e layout que
+                “respira”.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3 class="h3">Testes, qualidade e evolução</h3>
+              <p class="muted">
+                Começando pelos fundamentos: testes unitários (JUnit/Mockito),
+                organização de código, legibilidade, e documentação enxuta para
+                permitir manutenção e crescimento do projeto.
+              </p>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="cta-row">
-          <a class="btn primary" href="/contato/">Entrar em contato</a>
-          <a class="btn ghost" href="/curriculo/">Ver currículo</a>
+      <!-- COMO EU TRABALHO -->
+      <section class="section" aria-labelledby="como-title">
+        <div class="container">
+          <h2 class="h2" id="como-title">Como eu trabalho</h2>
+
+          <div class="cards">
+            <article class="card">
+              <h3 class="h3">Mobile-first de verdade</h3>
+              <p class="muted">
+                Eu começo pelo essencial no mobile (conteúdo, hierarquia,
+                espaçamento), e só depois amplio para desktop. Isso evita
+                “remendos” e mantém o layout consistente.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3 class="h3">Arquitetura simples, mas intencional</h3>
+              <p class="muted">
+                Prefiro uma estrutura clara do que complexidade cedo demais.
+                Camadas bem definidas, nomes consistentes e responsabilidades
+                explícitas.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3 class="h3">Documentação que serve</h3>
+              <p class="muted">
+                Registro decisões técnicas, padrão de pastas, setup do projeto e
+                pontos importantes. Documentar bem ajuda o projeto a continuar
+                “fácil” mesmo quando cresce.
+              </p>
+            </article>
+          </div>
         </div>
+      </section>
+
+      <!-- PROJETOS EM DESTAQUE -->
+      <section class="section" aria-labelledby="destaque-title">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="h2" id="destaque-title">Projetos em destaque</h2>
+            <a class="link" href="/projetos/">Ver todos →</a>
+          </div>
+
+          <div class="project-list">
+            <article class="project">
+              <div class="project-top">
+                <h3 class="h3">MedicFlow</h3>
+                <span class="badge">SaaS</span>
+              </div>
+              <p class="muted">
+                Plataforma de gestão clínica com foco em prontuário, agenda e
+                organização do fluxo.
+              </p>
+              <div class="tags">
+                <span class="tag">Java</span>
+                <span class="tag">Spring</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn small" href="/projetos/medicflow/">Ver case</a>
+                <a class="btn small ghost" href="/links/">Links</a>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-top">
+                <h3 class="h3">DSCommerce</h3>
+                <span class="badge">Fullstack</span>
+              </div>
+              <p class="muted">
+                Projeto fullstack (DevSuperior) com backend e frontend
+                integrados, focado em fundamentos de produto.
+              </p>
+              <div class="tags">
+                <span class="tag">Spring</span>
+                <span class="tag">React</span>
+                <span class="tag">REST</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn small" href="/projetos/dscommerce/">Ver case</a>
+                <a class="btn small ghost" href="/links/">Links</a>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-top">
+                <h3 class="h3">DSCatalog</h3>
+                <span class="badge">Testes</span>
+              </div>
+              <p class="muted">
+                Backend com foco em testes automatizados e qualidade:
+                validações, camadas e boas práticas.
+              </p>
+              <div class="tags">
+                <span class="tag">JUnit</span>
+                <span class="tag">Mockito</span>
+                <span class="tag">Spring</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn small" href="/projetos/dscatalog/">Ver case</a>
+                <a class="btn small ghost" href="/links/">Links</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- REDES -->
+      <section class="section" aria-labelledby="redes-title">
+        <div class="container">
+          <h2 class="h2" id="redes-title">Minhas redes</h2>
+          <p class="muted">Projetos, artigos e atualizações do dia a dia.</p>
+
+          <div class="social-grid">
+            <a
+              class="social"
+              href="https://github.com/andreblosaliatti"
+              target="_blank"
+              rel="noreferrer"
+              >GitHub</a
+            >
+            <a class="social" href="/links/" target="_blank" rel="noreferrer"
+              >LinkedIn</a
+            >
+            <a class="social" href="/links/" target="_blank" rel="noreferrer"
+              >YouTube</a
+            >
+            <a class="social" href="/links/" target="_blank" rel="noreferrer"
+              >Instagram</a
+            >
+            <a class="social" href="/links/" target="_blank" rel="noreferrer"
+              >Medium</a
+            >
+            <a class="social" href="/links/" target="_blank" rel="noreferrer"
+              >Dev.to</a
+            >
+            <a class="social" href="/links/" target="_blank" rel="noreferrer"
+              >X</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section">
+        <div class="container">
+          <div class="cta-row">
+            <a class="btn primary" href="/contato/">Entrar em contato</a>
+            <a class="btn ghost" href="/curriculo/">Ver currículo</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> André Blos Aliatti</p>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> André Blos Aliatti</p>
-      <a class="link" href="/">Home</a>
-    </div>
-  </footer>
-
-  <script src="/js/app.js"></script>
-</body>
+    <script src="/js/app.js"></script>
+  </body>
 </html>
