@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>FinanceFlow — Case | André Blos Aliatti</title>
+    <title>FinanceFlow | Case técnico — André Blos Aliatti</title>
     <meta
       name="description"
-      content="Case do FinanceFlow: projeto em evolução para controle financeiro, organização de dados e relatórios."
+      content="Case técnico do FinanceFlow: projeto em evolução para controle financeiro, organização de dados e geração de relatórios."
     />
 
     <!-- Web Awesome -->
@@ -20,7 +20,7 @@
       src="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/webawesome.loader.js"
     ></script>
 
-    <link rel="icon" href="../../assets/favicon.png" />
+    <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/global.css" />
   </head>
 
@@ -46,8 +46,15 @@
           <a class="nav-link-desktop" href="/contato/">Contato</a>
         </nav>
 
-        <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navPanel">
-          <wa-icon name="bars"></wa-icon>
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="navPanel"
+        >
+          <span><wa-icon name="bars"></wa-icon></span>
         </button>
       </div>
 
@@ -62,33 +69,33 @@
     </header>
 
     <main id="conteudo" class="main">
+      <!-- HERO -->
       <section class="section hero">
         <div class="container">
-          <p class="eyebrow">CASE • EM EVOLUÇÃO</p>
+          <p class="eyebrow">CASE TÉCNICO • EM EVOLUÇÃO</p>
 
           <h1 class="h1">
             FinanceFlow
-            <span class="h1-accent">Controle financeiro com organização de dados e relatórios (fase inicial).</span>
+            <span class="h1-accent">
+              Projeto para controle financeiro, organização de dados e relatórios
+            </span>
           </h1>
 
-          <p class="muted">Jan 2026 • 3–4 min de leitura</p>
+          <p class="muted">Status: em evolução • Jan 2026</p>
 
           <div class="chips">
             <span class="chip">Dados</span>
+            <span class="chip">Financeiro</span>
             <span class="chip">Relatórios</span>
             <span class="chip">Arquitetura</span>
-          </div>
-
-          <div class="cta-row" style="margin-top: 14px">
-            <a class="btn primary" href="/links/">Ver links</a>
-            <a class="btn ghost" href="/projetos/">Voltar ao portfólio</a>
           </div>
         </div>
       </section>
 
+      <!-- CAPA -->
       <section class="section">
         <div class="container">
-          <div class="post-cover">
+          <div class="case-cover">
             <img
               src="/assets/img/projects/financeflow.png"
               alt="Capa do projeto FinanceFlow"
@@ -99,44 +106,102 @@
         </div>
       </section>
 
+      <!-- CONTEÚDO + SIDEBAR -->
       <section class="section">
         <div class="container">
-          <article class="card article">
-            <h2 class="h2">Visão geral</h2>
-            <p class="muted">
-              O <strong>FinanceFlow</strong> é um projeto em evolução para organizar lançamentos, consolidar dados e gerar
-              relatórios — com foco em clareza, padronização e escalabilidade.
-            </p>
+          <div class="case-grid">
+            <!-- Coluna principal -->
+            <article class="card">
+              <h2 class="h2">Visão geral</h2>
+              <p class="muted">
+                O <strong>FinanceFlow</strong> é um projeto em evolução voltado à
+                organização de lançamentos financeiros, consolidação de dados e
+                geração de relatórios claros, com foco em padronização e
+                escalabilidade.
+              </p>
 
-            <h2 class="h2">Objetivos do projeto</h2>
-            <ul class="about-list">
-              <li>Centralizar entradas/saídas e categorias</li>
-              <li>Permitir visão por período e por finalidade</li>
-              <li>Gerar relatórios e indicadores</li>
-              <li>Evoluir para uma arquitetura mais robusta</li>
-            </ul>
+              <h2 class="h2">Problema que resolve</h2>
+              <ul class="about-list">
+                <li>Dados financeiros dispersos e pouco padronizados</li>
+                <li>Dificuldade de visualizar entradas e saídas por período</li>
+                <li>Ausência de relatórios consolidados e indicadores</li>
+              </ul>
 
-            <h2 class="h2">Stack (ajuste conforme sua implementação)</h2>
-            <div class="tags">
-              <span class="tag">Web</span>
-              <span class="tag">Backend</span>
-              <span class="tag">Banco de dados</span>
-              <span class="tag">Relatórios</span>
-            </div>
+              <h2 class="h2">Objetivos do projeto</h2>
+              <ul class="about-list">
+                <li>Centralizar lançamentos, categorias e finalidades</li>
+                <li>Permitir análises por período e por centro de custo</li>
+                <li>Gerar relatórios financeiros e indicadores básicos</li>
+                <li>Evoluir para uma arquitetura mais robusta</li>
+              </ul>
 
-            <h2 class="h2">Próximos passos</h2>
-            <ul class="about-list">
-              <li>Definir modelo de dados (entidades, categorias e filtros)</li>
-              <li>Construir endpoints e validações</li>
-              <li>Adicionar relatórios (mensal, por categoria, por centro de custo)</li>
-              <li>Criar tela de dashboard</li>
-            </ul>
+              <h2 class="h2">Próximos passos</h2>
+              <ul class="about-list">
+                <li>Definir modelo de dados (entidades e relacionamentos)</li>
+                <li>Construir backend com validações e regras de negócio</li>
+                <li>Adicionar relatórios (mensal, categoria, finalidade)</li>
+                <li>Criar dashboard para visualização dos dados</li>
+              </ul>
 
-            <div class="cta-row">
-              <a class="btn primary" href="/links/">GitHub</a>
-              <a class="btn ghost" href="/projetos/">Voltar</a>
-            </div>
-          </article>
+              <div class="cta-row">
+                <a class="btn primary" href="/projetos/">Voltar aos projetos</a>
+                <a class="btn ghost" href="/contato/">Falar comigo</a>
+              </div>
+            </article>
+
+            <!-- Sidebar -->
+            <aside class="case-meta">
+              <div class="kv">
+                <div class="label">Status</div>
+                <div class="value">Projeto em evolução</div>
+              </div>
+
+              <div class="kv">
+                <div class="label">Foco técnico</div>
+                <div class="value">Modelagem de dados • Relatórios • Arquitetura</div>
+              </div>
+
+              <div class="kv">
+                <div class="label">Stack (planejada)</div>
+                <div class="value">Backend • Banco de dados • Camada de relatórios</div>
+              </div>
+
+              <div class="kv">
+                <div class="label">Tags</div>
+                <div class="value">
+                  <div class="tags">
+                    <span class="tag">Financeiro</span>
+                    <span class="tag">Dados</span>
+                    <span class="tag">Projeto em evolução</span>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- RELACIONADOS -->
+      <section class="section" aria-labelledby="rel-title">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="h2" id="rel-title">Outros projetos</h2>
+            <a class="link" href="/projetos/">Ver todos →</a>
+          </div>
+
+          <div class="posts">
+            <article class="post">
+              <h3 class="h3">MedicFlow</h3>
+              <p class="muted">SaaS para gestão clínica com prontuário e agenda.</p>
+              <a class="link" href="/projetos/medicflow/">Ver case →</a>
+            </article>
+
+            <article class="post">
+              <h3 class="h3">DSCommerce</h3>
+              <p class="muted">Projeto fullstack com Spring Boot e React.</p>
+              <a class="link" href="/projetos/dscommerce/">Ver case →</a>
+            </article>
+          </div>
         </div>
       </section>
     </main>
@@ -144,6 +209,7 @@
     <footer class="footer">
       <div class="container footer-inner">
         <p>© <span id="year"></span> André Blos Aliatti</p>
+        <a class="link" href="/projetos/">Projetos</a>
       </div>
     </footer>
 

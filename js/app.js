@@ -37,3 +37,62 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// =========================================================
+  // Contato (Formspree) — sucesso na mesma página
+  // Requer IDs no HTML:
+  // #contactForm, #formStatus, #sendBtn, #contactCard, #successCard
+  // =========================================================
+  const form = document.getElementById("contactForm");
+  if (form) {
+    const statusEl = document.getElementById("formStatus");
+    const sendBtn = document.getElementById("sendBtn");
+    const contactCard = document.getElementById("contactCard");
+    const successCard = document.getElementById("successCard");
+
+    const setStatus = (msg, type) => {
+      if (!statusEl) return;
+      statusEl.textContent = msg || "";
+      statusEl.className = "form-status" + (type ? " " + type : "");
+    };
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      // validação nativa
+      if (!form.checkValidity()) {
+        setStatus("Confere os campos obrigatórios antes de enviar.", "err");
+        return;
+      }
+
+      setStatus("Enviando…", "");
+      if (sendBtn) sendBtn.disabled = true;
+
+      try {
+        const formData = new FormData(form);
+
+        const res = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: { Accept: "application/json" },
+        });
+
+        if (res.ok) {
+          form.reset();
+          setStatus("", "");
+
+          if (contactCard) contactCard.hidden = true;
+          if (successCard) {
+            successCard.hidden = false;
+            successCard.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        } else {
+          setStatus("Não consegui enviar agora. Tenta novamente em alguns segundos.", "err");
+        }
+      } catch (err) {
+        setStatus("Falha de conexão. Verifica tua internet e tenta de novo.", "err");
+      } finally {
+        if (sendBtn) sendBtn.disabled = false;
+      }
+    });
+  }

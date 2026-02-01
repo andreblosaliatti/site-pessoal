@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>DSCatalog — Case | André Blos Aliatti</title>
+    <title>DSCatalog | Case técnico — André Blos Aliatti</title>
     <meta
       name="description"
-      content="Case do DSCatalog: backend com foco em testes automatizados, qualidade, camadas e boas práticas."
+      content="Case técnico do DSCatalog: backend com foco em testes automatizados, qualidade, camadas e boas práticas."
     />
 
-    <!-- Web Awesome -->
+    <!-- Web Awesome (CDN correto) -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/styles/themes/default.css"
@@ -20,7 +20,7 @@
       src="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/webawesome.loader.js"
     ></script>
 
-    <link rel="icon" href="../../assets/favicon.png" />
+    <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/global.css" />
   </head>
 
@@ -46,8 +46,15 @@
           <a class="nav-link-desktop" href="/contato/">Contato</a>
         </nav>
 
-        <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navPanel">
-          <wa-icon name="bars"></wa-icon>
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="navPanel"
+        >
+          <span><wa-icon name="bars"></wa-icon></span>
         </button>
       </div>
 
@@ -62,34 +69,32 @@
     </header>
 
     <main id="conteudo" class="main">
+      <!-- HERO -->
       <section class="section hero">
         <div class="container">
-          <p class="eyebrow">CASE • BACKEND</p>
+          <p class="eyebrow">CASE TÉCNICO • BACKEND</p>
 
           <h1 class="h1">
             DSCatalog
-            <span class="h1-accent">Backend com foco em testes automatizados, qualidade e boas práticas.</span>
+            <span class="h1-accent">Backend com foco em testes automatizados, qualidade e boas práticas</span>
           </h1>
 
-          <p class="muted">Jan 2026 • 4–6 min de leitura</p>
+          <p class="muted">Status: concluído (estudo) • Jan 2026</p>
 
           <div class="chips">
             <span class="chip">Backend</span>
-            <span class="chip">Testes</span>
+            <span class="chip">Java</span>
+            <span class="chip">Spring Boot</span>
             <span class="chip">JUnit</span>
             <span class="chip">Mockito</span>
-          </div>
-
-          <div class="cta-row" style="margin-top: 14px">
-            <a class="btn primary" href="/links/">Ver links</a>
-            <a class="btn ghost" href="/projetos/">Voltar ao portfólio</a>
           </div>
         </div>
       </section>
 
+      <!-- CAPA -->
       <section class="section">
         <div class="container">
-          <div class="post-cover">
+          <div class="case-cover">
             <img
               src="/assets/img/projects/dscatalog.png"
               alt="Capa do projeto DSCatalog"
@@ -100,51 +105,108 @@
         </div>
       </section>
 
+      <!-- CONTEÚDO + SIDEBAR -->
       <section class="section">
         <div class="container">
-          <article class="card article">
-            <h2 class="h2">Visão geral</h2>
-            <p class="muted">
-              O <strong>DSCatalog</strong> é um projeto focado em consolidar fundamentos de backend e, principalmente,
-              <strong>testes automatizados</strong> e qualidade de código em uma API bem organizada.
-            </p>
+          <div class="case-grid">
+            <!-- Coluna principal -->
+            <article class="card">
+              <h2 class="h2">Visão geral</h2>
+              <p class="muted">
+                O <strong>DSCatalog</strong> é um projeto focado em consolidar fundamentos de backend e, principalmente,
+                <strong>testes automatizados</strong> e qualidade de código em uma API bem organizada.
+              </p>
 
-            <h2 class="h2">Foco do projeto</h2>
-            <ul class="about-list">
-              <li>Testes unitários (regras de negócio)</li>
-              <li>Testes de camada (Service/Controller) quando aplicável</li>
-              <li>Validações e contratos consistentes via DTOs</li>
-              <li>Refatoração segura com apoio de testes</li>
-            </ul>
+              <h2 class="h2">Problema que resolve</h2>
+              <ul class="about-list">
+                <li>Dificuldade de refatorar com segurança sem testes</li>
+                <li>Falta de padronização entre camadas e contratos de API</li>
+                <li>Evolução do código quebrando regras de negócio sem perceber</li>
+              </ul>
 
-            <h2 class="h2">Stack e tecnologias</h2>
-            <div class="tags">
-              <span class="tag">Java</span>
-              <span class="tag">Spring Boot</span>
-              <span class="tag">JUnit</span>
-              <span class="tag">Mockito</span>
-              <span class="tag">JPA / Hibernate</span>
-            </div>
+              <h2 class="h2">Arquitetura</h2>
+              <ul class="about-list">
+                <li>Backend em camadas (Controller / Service / Repository)</li>
+                <li>DTOs para entrada/saída com validações e contratos consistentes</li>
+                <li>Persistência com JPA/Hibernate (quando aplicável ao módulo)</li>
+              </ul>
 
-            <h2 class="h2">Destaques técnicos</h2>
-            <ul class="about-list">
-              <li>Organização clara por camadas e responsabilidades</li>
-              <li>Testes cobrindo cenários de sucesso e falha</li>
-              <li>Boas práticas para evoluir API sem quebrar contrato</li>
-            </ul>
+              <h2 class="h2">Foco do projeto</h2>
+              <ul class="about-list">
+                <li>Testes unitários (regras de negócio)</li>
+                <li>Testes de camada (Service/Controller) quando aplicável</li>
+                <li>Refatoração segura com apoio de testes</li>
+                <li>Boas práticas para evoluir API sem quebrar contrato</li>
+              </ul>
 
-            <h2 class="h2">Próximos passos</h2>
-            <ul class="about-list">
-              <li>Aumentar cobertura de testes e incluir integração</li>
-              <li>Melhorar documentação (Swagger/OpenAPI), se aplicável</li>
-              <li>Automatizar pipeline básico (build + testes)</li>
-            </ul>
+              <h2 class="h2">Próximos passos</h2>
+              <ul class="about-list">
+                <li>Aumentar cobertura de testes e incluir integração</li>
+                <li>Reforçar documentação (Swagger/OpenAPI)</li>
+                <li>Pipeline simples (build + testes) no GitHub Actions</li>
+              </ul>
 
-            <div class="cta-row">
-              <a class="btn primary" href="/links/">GitHub</a>
-              <a class="btn ghost" href="/projetos/">Voltar</a>
-            </div>
-          </article>
+              <div class="cta-row">
+                <a class="btn primary" href="/projetos/">Voltar aos projetos</a>
+                <a class="btn ghost" href="/contato/">Falar comigo</a>
+              </div>
+            </article>
+
+            <!-- Sidebar -->
+            <aside class="case-meta">
+              <div class="kv">
+                <div class="label">Stack</div>
+                <div class="value">Java • Spring Boot • JPA/Hibernate • JUnit • Mockito</div>
+              </div>
+
+              <div class="kv">
+                <div class="label">Pontos técnicos</div>
+                <div class="value">Testes • Camadas • DTOs • Qualidade</div>
+              </div>
+
+              <div class="kv">
+                <div class="label">Repositório / Demo</div>
+                <div class="value">
+                  <a class="link" href="https://github.com/andreblosaliatti/dscatalog" target="_blank" rel="noopener">Repositório GitHub →</a>
+                </div>
+              </div>
+
+              <div class="kv">
+                <div class="label">Tags</div>
+                <div class="value">
+                  <div class="tags">
+                    <span class="tag">Testes</span>
+                    <span class="tag">Boas práticas</span>
+                    <span class="tag">API</span>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- RELACIONADOS -->
+      <section class="section" aria-labelledby="rel-title">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="h2" id="rel-title">Outros projetos</h2>
+            <a class="link" href="/projetos/">Ver todos →</a>
+          </div>
+
+          <div class="posts">
+            <article class="post">
+              <h3 class="h3">MedicFlow</h3>
+              <p class="muted">SaaS para gestão clínica com prontuário, agenda e automações.</p>
+              <a class="link" href="/projetos/medicflow/">Ver case →</a>
+            </article>
+
+            <article class="post">
+              <h3 class="h3">DSCommerce</h3>
+              <p class="muted">Fullstack (DevSuperior) com backend + frontend integrados.</p>
+              <a class="link" href="/projetos/dscommerce/">Ver case →</a>
+            </article>
+          </div>
         </div>
       </section>
     </main>
@@ -152,6 +214,7 @@
     <footer class="footer">
       <div class="container footer-inner">
         <p>© <span id="year"></span> André Blos Aliatti</p>
+        <a class="link" href="/projetos/">Projetos</a>
       </div>
     </footer>
 

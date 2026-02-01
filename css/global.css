@@ -496,14 +496,18 @@ p{ margin: 0 0 var(--space-3); }
   overflow: hidden;
   border: 1px solid var(--border);
   background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
 }
 
 .case-cover img{
   width: 100%;
   display: block;
   height: auto;
-  max-height: 520px;
-  object-fit: cover;
+  max-height: 420px;
+  object-fit: contain;
 }
 
 /* no desktop, conteúdo + sidebar */
@@ -722,4 +726,87 @@ p{ margin: 0 0 var(--space-3); }
   .project-list{ grid-template-columns: repeat(3, 1fr); }
   .posts{ grid-template-columns: repeat(3, 1fr); }
   .social-grid{ grid-template-columns: repeat(4, 1fr); }
+}
+
+/* =========================================================
+   FORMS (Contato) — Mobile First + integra com o design atual
+   Cole no FINAL do global.css
+   ========================================================= */
+
+.form{
+  display: grid;
+  gap: 12px;
+}
+
+.field{
+  display: grid;
+  gap: 6px;
+}
+
+.field > span{
+  font-weight: 800;
+  font-size: .95rem;
+  color: var(--text);
+}
+
+.field input,
+.field textarea{
+  width: 100%;
+  border: 1px solid rgba(17,24,39,.14);
+  background: #fff;
+  border-radius: 14px;
+  padding: 12px 12px;
+  outline: none;
+  transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+}
+
+.field textarea{
+  min-height: 140px;
+  resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus{
+  border-color: rgba(17,24,39,.38);
+  box-shadow: 0 0 0 4px rgba(17,24,39,.10);
+}
+
+.form-actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.form-status{
+  min-height: 22px;
+  font-size: .95rem;
+  color: var(--muted);
+}
+
+.form-status.ok{ color: #16a34a; }
+.form-status.err{ color: #dc2626; }
+
+/* Sucesso (mesma estética do site) */
+.success{
+  display: grid;
+  gap: 10px;
+  text-align: left;
+}
+
+.success-title{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.success-title wa-icon{
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px){
+  .form{
+    gap: 14px;
+  }
 }
