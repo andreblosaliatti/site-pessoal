@@ -15,6 +15,9 @@ img, svg, video { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
 button, input, textarea { font: inherit; }
 
+[hidden]{ display: none !important; }
+
+
 /* Tokens */
 :root{
   --bg: #f3f4f6;
@@ -414,6 +417,12 @@ p{ margin: 0 0 var(--space-3); }
 }
 
 /* Projects */
+
+.project{
+  display: flex;
+  flex-direction: column;
+}
+
 .project-list{ 
   display: grid;
   gap: 18px;
@@ -466,6 +475,7 @@ p{ margin: 0 0 var(--space-3); }
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  margin-top: auto;
 }
 
 /* ===== CASE (página do projeto) ===== */
@@ -810,3 +820,21 @@ p{ margin: 0 0 var(--space-3); }
     gap: 14px;
   }
 }
+
+.field-error{
+  display: none;
+  font-size: .88rem;
+  color: #dc2626;
+  margin-top: 2px;
+}
+
+.field.is-invalid .field-error{
+  display: block;
+}
+
+.field.is-invalid input,
+.field.is-invalid textarea{
+  border-color: rgba(220,38,38,.55);
+  box-shadow: 0 0 0 4px rgba(220,38,38,.10);
+}
+

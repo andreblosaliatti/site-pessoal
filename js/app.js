@@ -39,60 +39,137 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // =========================================================
-  // Contato (Formspree) — sucesso na mesma página
-  // Requer IDs no HTML:
-  // #contactForm, #formStatus, #sendBtn, #contactCard, #successCard
-  // =========================================================
+// Contato (Formspree) — validação + sucesso na mesma página
+// Requer IDs no HTML:
+// #contactForm, #formStatus, #sendBtn, #contactCard, #successCard
+// =========================================================
+(() => {
   const form = document.getElementById("contactForm");
-  if (form) {
-    const statusEl = document.getElementById("formStatus");
-    const sendBtn = document.getElementById("sendBtn");
-    const contactCard = document.getElementById("contactCard");
-    const successCard = document.getElementById("successCard");
+  if (!form) return;
 
-    const setStatus = (msg, type) => {
-      if (!statusEl) return;
-      statusEl.textContent = msg || "";
-      statusEl.className = "form-status" + (type ? " " + type : "");
-    };
+  const statusEl = document.getElementById("formStatus");
+  const sendBtn = document.getElementById("sendBtn");
+  const contactCard = document.getElementById("contactCard");
+  const successCard = document.getElementById("successCard");
 
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
+  // Garante que o sucesso começa escondido (caso CSS/JS anterior tenha mexido)
+  if (successCard) successCard.hidden = true;
+  if (contactCard) contactCard.hidden = false;
 
-      // validação nativa
-      if (!form.checkValidity()) {
-        setStatus("Confere os campos obrigatórios antes de enviar.", "err");
-        return;
-      }
+  const setStatus = (msg, type) => {
+    if (!statusEl) return;
+    statusEl.textContent = msg || "";
+    statusEl.className = "form-status" + (type ? " " + type : "");
+  };
 
-      setStatus("Enviando…", "");
-      if (sendBtn) sendBtn.disabled = true;
+  const getFieldWrapper = (input) => input.closest(".field");
 
-      try {
-        const formData = new FormData(form);
+  const showFieldError = (input, message) => {
+    const field = getFieldWrapper(input);
+    if (!field) return;
 
-        const res = await fetch(form.action, {
-          method: "POST",
-          body: formData,
-          headers: { Accept: "application/json" },
-        });
+    field.classList.add("is-invalid");
 
-        if (res.ok) {
-          form.reset();
-          setStatus("", "");
+    const id = input.id;
+    const errEl = field.querySelector(`[data-error-for="${id}"]`);
+    if (errEl) errEl.textContent = message || "Campo obrigatório.";
+  };
 
-          if (contactCard) contactCard.hidden = true;
-          if (successCard) {
-            successCard.hidden = false;
-            successCard.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-        } else {
-          setStatus("Não consegui enviar agora. Tenta novamente em alguns segundos.", "err");
-        }
-      } catch (err) {
-        setStatus("Falha de conexão. Verifica tua internet e tenta de novo.", "err");
-      } finally {
-        if (sendBtn) sendBtn.disabled = false;
+  const clearFieldError = (input) => {
+    const field = getFieldWrapper(input);
+    if (!field) return;
+
+    field.classList.remove("is-invalid");
+
+    const id = input.id;
+    const errEl = field.querySelector(`[data-error-for="${id}"]`);
+    if (errEl) errEl.textContent = "";
+  };
+
+  const messageFor = (input) => {
+    const v = input.validity;
+
+    if (v.valueMissing) return "Este campo é obrigatório.";
+    if (v.typeMismatch && input.type === "email") return "Digite um e-mail válido.";
+    if (v.tooShort) return `Digite pelo menos ${input.minLength} caracteres.`;
+    if (v.patternMismatch) return "Formato inválido.";
+
+    return "Campo inválido.";
+  };
+
+  const validateAll = () => {
+    setStatus("", "");
+
+    let ok = true;
+    const inputs = form.querySelectorAll("input, textarea");
+
+    inputs.forEach((el) => {
+      if (el.name === "_gotcha" || el.type === "hidden") return;
+
+      if (!el.checkValidity()) {
+        ok = false;
+        showFieldError(el, messageFor(el));
+      } else {
+        clearFieldError(el);
       }
     });
-  }
+
+    if (!ok) setStatus("Confere os campos destacados antes de enviar.", "err");
+    return ok;
+  };
+
+  // Limpa erro enquanto digita
+  form.addEventListener("input", (e) => {
+    const el = e.target;
+    if (!(el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement)) return;
+    if (el.name === "_gotcha" || el.type === "hidden") return;
+
+    if (el.checkValidity()) clearFieldError(el);
+  });
+
+  // No blur, mostra erro se tiver
+  form.addEventListener("blur", (e) => {
+    const el = e.target;
+    if (!(el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement)) return;
+    if (el.name === "_gotcha" || el.type === "hidden") return;
+
+    if (!el.checkValidity()) showFieldError(el, messageFor(el));
+  }, true);
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    if (!validateAll()) return;
+
+    setStatus("Enviando…", "");
+    if (sendBtn) sendBtn.disabled = true;
+
+    try {
+      const formData = new FormData(form);
+
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (res.ok) {
+        form.reset();
+        setStatus("", "");
+
+        if (contactCard) contactCard.hidden = true;
+        if (successCard) {
+          successCard.hidden = false;
+          successCard.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      } else {
+        setStatus("Não consegui enviar agora. Tenta novamente em alguns segundos.", "err");
+      }
+    } catch (err) {
+      setStatus("Falha de conexão. Verifica tua internet e tenta de novo.", "err");
+    } finally {
+      if (sendBtn) sendBtn.disabled = false;
+    }
+  });
+})();
+
