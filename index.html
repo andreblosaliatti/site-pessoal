@@ -4,16 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Contato — André Blos Aliatti</title>
+    <title>André Blos Aliatti | Desenvolvedor Web Full Stack</title>
     <meta
       name="description"
-      content="Entre em contato com André Blos Aliatti para projetos web, freelas, parcerias ou oportunidades profissionais."
+      content="Portfólio de André Blos Aliatti — projetos web, frontend e backend. Cases, artigos e contato."
     />
 
     <meta name="author" content="André Blos Aliatti" />
     <meta name="robots" content="index, follow" />
 
-    <!-- Web Awesome -->
+    <meta
+      property="og:title"
+      content="André Blos Aliatti | Desenvolvedor Web Full Stack"
+    />
+    <meta
+      property="og:description"
+      content="Projetos, cases e conteúdo técnico sobre frontend e backend."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/img/og-default.png" />
+    <!-- Web Awesome (CDN correto) -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/styles/themes/default.css"
@@ -23,227 +33,443 @@
       src="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/webawesome.loader.js"
     ></script>
 
-    <!-- Favicon padrão do site -->
     <link rel="icon" href="/assets/favicon.png" />
-
     <link rel="stylesheet" href="/css/global.css" />
   </head>
 
   <body>
-    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-
-    <header class="header">
-      <div class="container header-row">
-        <a class="brand" href="/" aria-label="Voltar para Home">
-          <img
-            class="brand-logo"
-            src="/assets/img/logo-andre-transp.png"
-            alt="André Blos Aliatti"
-            onerror="this.style.display = 'none'"
-          />
-          <span class="brand-text">André Blos Aliatti</span>
-        </a>
-
-        <nav class="nav-desktop" aria-label="Navegação principal">
-          <a class="nav-link-desktop" href="/sobre/">Sobre</a>
-          <a class="nav-link-desktop" href="/projetos/">Portfólio</a>
-          <a class="nav-link-desktop" href="/blog/">Blog</a>
-          <a class="nav-link-desktop" href="/contato/" aria-current="page">Contato</a>
+    <div class="container">
+      <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+      <header class="header">
+        <div class="container header-row">
+          <a class="brand" href="index.html" aria-label="Voltar para Home">
+            <img
+              class="brand-logo"
+              src="assets/img/logo-andre-transp.png"
+              alt="André Blos Aliatti"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="brand-text">André Blos Aliatti</span>
+          </a>
+          <!-- NAV DESKTOP (estilo print) -->
+          <nav class="nav-desktop" aria-label="Navegação principal">
+            <a class="nav-link-desktop" href="/sobre/">Sobre</a>
+            <a class="nav-link-desktop" href="/projetos/">Portfólio</a>
+            <a class="nav-link-desktop" href="/blog/">Blog</a>
+            <a class="nav-link-desktop" href="/contato/">Contato</a>
+          </nav>
+          <!-- MENU MOBILE -->
+          <button
+            class="menu-btn"
+            id="menuBtn"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="navPanel"
+          >
+            <wa-icon name="bars"></wa-icon>
+          </button>
+        </div>
+        <nav class="nav-panel" id="navPanel" hidden>
+          <div class="container nav-inner">
+            <a class="nav-link" href="/sobre/">Sobre</a>
+            <a class="nav-link" href="/projetos/">Projetos</a>
+            <a class="nav-link" href="/blog/">Blog</a>
+            <a class="nav-link nav-cta" href="/contato/">Contato</a>
+          </div>
         </nav>
-
-        <button
-          class="menu-btn"
-          id="menuBtn"
-          type="button"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-          aria-controls="navPanel"
-        >
-          <wa-icon name="bars"></wa-icon>
-        </button>
-      </div>
-
-      <nav class="nav-panel" id="navPanel" hidden>
-        <div class="container nav-inner">
-          <a class="nav-link" href="/sobre/">Sobre</a>
-          <a class="nav-link" href="/projetos/">Projetos</a>
-          <a class="nav-link" href="/blog/">Blog</a>
-          <a class="nav-link nav-cta" href="/contato/" aria-current="page">Contato</a>
-        </div>
-      </nav>
-    </header>
-
-    <main id="conteudo" class="main">
-      <section class="section hero">
-        <div class="container">
-          <p class="eyebrow">CONTATO</p>
-
-          <h1 class="h1">
-            Vamos conversar
-            <span class="h1-accent">sobre seu projeto</span>
-          </h1>
-
-          <p class="lead">
-            Me chama para projetos web, freelas, parcerias ou oportunidades.
-            Se puder, inclua contexto e links.
-          </p>
-
-          <div class="chips" aria-label="Assuntos">
-            <span class="chip">Sites</span>
-            <span class="chip">APIs</span>
-            <span class="chip">Java / Spring</span>
-            <span class="chip">React</span>
+      </header>
+      <main id="conteudo" class="main">
+        <!-- HERO (mais parecido com o print: limpo e com respiro) -->
+        <section class="section hero">
+          <div class="container">
+            <h1 class="h1">
+              ANDRÉ BLOS ALIATTI
+              <span class="h1-accent">Web. Frontend. Backend.</span>
+            </h1>
+            <p class="lead">
+              Construo soluções web completas — interfaces modernas e backends
+              bem estruturados — com foco em performance, clareza e evolução
+              contínua.
+            </p>
+            <div class="hero-actions">
+              <a class="btn primary" href="/projetos/">Conheça meu trabalho</a>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section class="section" aria-labelledby="form-title">
-        <div class="container">
-          <div class="case-grid">
-            <!-- Form -->
-            <article class="card" id="contactCard">
-              <h2 class="h2" id="form-title">Enviar mensagem</h2>
-              <p class="muted">Normalmente respondo em até 24h úteis.</p>
-
-              <form
-                class="form"
-                id="contactForm"
-                action="https://formspree.io/f/mnjzjdoa"
-                method="POST"
-                novalidate
-              >
-                <label class="field">
-                  <span>Nome</span>
-                  <input
-                    id="nome"
-                    type="text"
-                    name="nome"
-                    placeholder="Seu nome"
-                    autocomplete="name"
-                    required
-                    minlength="2"
-                  />
-                  <small class="field-error" data-error-for="nome"></small>
-                </label>
-
-                <label class="field">
-                  <span>Email</span>
-                  <input
-                    id="email"
-                    type="email"
-                    name="email"
-                    placeholder="seu@email.com"
-                    autocomplete="email"
-                    required
-                  />
-                  <small class="field-error" data-error-for="email"></small>
-                </label>
-
-                <label class="field">
-                  <span>Assunto</span>
-                  <input
-                    id="assunto"
-                    type="text"
-                    name="assunto"
-                    placeholder="Ex.: Site / API / Parceria"
-                    required
-                    minlength="3"
-                  />
-                  <small class="field-error" data-error-for="assunto"></small>
-                </label>
-
-                <label class="field">
-                  <span>Mensagem</span>
-                  <textarea
-                    id="mensagem"
-                    name="mensagem"
-                    rows="6"
-                    placeholder="Conte o que você precisa e, se tiver, cole links aqui."
-                    required
-                    minlength="10"
-                  ></textarea>
-                  <small class="field-error" data-error-for="mensagem"></small>
-                </label>
-
-                <!-- anti-spam -->
-                <input
-                  type="text"
-                  name="_gotcha"
-                  style="display: none"
-                  tabindex="-1"
-                  autocomplete="off"
+        </section>
+        <!-- SOBRE MIM (igual print: foto à esquerda no desktop) -->
+        <section class="section" aria-labelledby="sobre-title">
+          <div class="container">
+            <h2 class="h2" id="sobre-title">Sobre mim</h2>
+            <div class="about">
+              <div class="about-photo">
+                <img
+                  src="assets/img/foto-andre.png"
+                  alt="Foto de André Blos Aliatti"
                 />
-
-                <!-- assunto padrão pro e-mail -->
-                <input
-                  type="hidden"
-                  name="_subject"
-                  value="Novo contato pelo site (andreblosaliatti.dev)"
-                />
-
-                <div class="form-actions">
-                  <button class="btn primary" type="submit" id="sendBtn">
-                    Enviar mensagem
-                  </button>
-                  <a class="btn ghost" href="/projetos/">Ver projetos</a>
-                </div>
-
-                <div
-                  class="form-status"
-                  id="formStatus"
-                  role="status"
-                  aria-live="polite"
-                ></div>
-              </form>
-            </article>
-
-            <!-- Sidebar -->
-            <aside class="case-meta" aria-label="Informações">
-              <div class="kv">
-                <div class="label">O que eu faço</div>
-                <div class="value">Web • APIs • Arquitetura</div>
               </div>
-
-              <div class="kv">
-                <div class="label">Stack</div>
-                <div class="value">Java/Spring • React • SQL</div>
+              <div class="about-copy">
+                <p class="muted">
+                  Desenvolvedor web com foco em projetos completos, combinando
+                  frontend bem cuidado e backend consistente. Gosto de organizar
+                  sistemas pensando em clareza e evolução.
+                </p>
+                <ul class="about-list">
+                  <li>Web apps e interfaces responsivas</li>
+                  <li>APIs e regras de negócio</li>
+                  <li>Arquitetura, padrões e organização</li>
+                  <li>Documentação e comunicação técnica</li>
+                </ul>
+                <a class="btn primary small" href="/sobre/">Saiba mais</a>
               </div>
-
-              <div class="kv">
-                <div class="label">Alternativas</div>
-                <div class="value">
-                  <a class="link" href="/links/">Links →</a>
-                </div>
-              </div>
-            </aside>
+            </div>
           </div>
-
-          <!-- Sucesso: começa escondido -->
-          <article class="card success" id="successCard" hidden style="margin-top: 18px">
-            <div class="success-title">
-              <wa-icon name="circle-check"></wa-icon>
-              <h2 class="h2" style="margin: 0">Mensagem enviada!</h2>
+        </section>
+        <!-- PORTFÓLIO -->
+        <section class="section" aria-labelledby="projetos-title">
+          <div class="container">
+            <div class="section-head">
+              <h2 class="h2" id="projetos-title">Portfólio</h2>
+              <a class="link" href="/projetos/">Ver todos →</a>
             </div>
 
-            <p class="muted">
-              Valeu — recebi teu contato. Vou responder assim que possível.
-            </p>
+            <div class="project-list">
+              <!-- 1) MedicFlow -->
+              <article class="project">
+                <a
+                  class="project-cover"
+                  href="/projetos/medicflow/"
+                  aria-label="Ver case do MedicFlow"
+                >
+                  <img
+                    src="assets/img/projects/medicflow.png"
+                    alt="Preview do projeto MedicFlow"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+
+                <div class="project-top">
+                  <h3 class="h3">
+                    <a class="project-title" href="/projetos/medicflow/"
+                      >MedicFlow</a
+                    >
+                  </h3>
+                  <span class="badge">SaaS</span>
+                </div>
+
+                <p class="muted">
+                  Plataforma de gestão clínica com agenda, prontuário e
+                  automações.
+                </p>
+
+                <div class="tags" aria-label="Tecnologias e foco">
+                  <span class="tag">Fullstack</span>
+                  <span class="tag">Java</span>
+                  <span class="tag">React</span>
+                </div>
+
+                <div class="project-actions">
+                  <a class="btn small" href="/projetos/medicflow/">Ver case</a>
+                  <a class="btn small ghost" href="/links/">Links</a>
+                </div>
+              </article>
+
+              <!-- 2) DSCommerce (DevSuperior) -->
+              <article class="project">
+                <a
+                  class="project-cover"
+                  href="/projetos/dscommerce/"
+                  aria-label="Ver case do DSCommerce"
+                >
+                  <img
+                    src="assets/img/projects/dscommerce.png"
+                    alt="Preview do projeto DSCommerce"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+
+                <div class="project-top">
+                  <h3 class="h3">
+                    <a class="project-title" href="/projetos/dscommerce/"
+                      >DSCommerce</a
+                    >
+                  </h3>
+                  <span class="badge">Fullstack</span>
+                </div>
+
+                <p class="muted">
+                  Projeto fullstack (DevSuperior) com backend e frontend
+                  integrados.
+                </p>
+
+                <div class="tags" aria-label="Tecnologias e foco">
+                  <span class="tag">Spring</span>
+                  <span class="tag">React</span>
+                  <span class="tag">REST</span>
+                </div>
+
+                <div class="project-actions">
+                  <a class="btn small" href="/projetos/dscommerce/">Ver case</a>
+                  <a class="btn small ghost" href="/links/">Links</a>
+                </div>
+              </article>
+
+              <!-- 3) DSCatalog (foco em testes) -->
+              <article class="project">
+                <a
+                  class="project-cover"
+                  href="/projetos/dscatalog/"
+                  aria-label="Ver case do DSCatalog"
+                >
+                  <img
+                    src="assets/img/projects/dscatalog.png"
+                    alt="Preview do projeto DSCatalog"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+
+                <div class="project-top">
+                  <h3 class="h3">
+                    <a class="project-title" href="/projetos/dscatalog/"
+                      >DSCatalog</a
+                    >
+                  </h3>
+                  <span class="badge">Testes</span>
+                </div>
+
+                <p class="muted">
+                  Backend com foco em testes automatizados, qualidade e boas
+                  práticas.
+                </p>
+
+                <div class="tags" aria-label="Tecnologias e foco">
+                  <span class="tag">JUnit</span>
+                  <span class="tag">Mockito</span>
+                  <span class="tag">Spring</span>
+                </div>
+
+                <div class="project-actions">
+                  <a class="btn small" href="/projetos/dscatalog/">Ver case</a>
+                  <a class="btn small ghost" href="/links/">Links</a>
+                </div>
+              </article>
+
+              <!-- 4) Portfólio (Guanabara) -->
+              <article class="project">
+                <a
+                  class="project-cover"
+                  href="/projetos/portfolio-guanabara/"
+                  aria-label="Ver case do Portfólio (HTML, CSS e JS)"
+                >
+                  <img
+                    src="assets/img/projects/portfolio-guanabara.png"
+                    alt="Preview do projeto Portfólio (HTML, CSS e JavaScript)"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+
+                <div class="project-top">
+                  <h3 class="h3">
+                    <a
+                      class="project-title"
+                      href="/projetos/portfolio-guanabara/"
+                      >Portfólio (Curso em Vídeo)</a
+                    >
+                  </h3>
+                  <span class="badge">Frontend</span>
+                </div>
+
+                <p class="muted">
+                  Site completo em HTML, CSS e JavaScript, com foco em layout e
+                  responsividade.
+                </p>
+
+                <div class="tags" aria-label="Tecnologias e foco">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+
+                <div class="project-actions">
+                  <a class="btn small" href="/projetos/portfolio-guanabara/"
+                    >Ver case</a
+                  >
+                  <a class="btn small ghost" href="/links/">Demo</a>
+                </div>
+              </article>
+
+              <!-- 5) FinanceFlow (em evolução) -->
+              <article class="project">
+                <a
+                  class="project-cover"
+                  href="/projetos/financeflow/"
+                  aria-label="Ver case do FinanceFlow"
+                >
+                  <img
+                    src="assets/img/projects/financeflow.png"
+                    alt="Preview do projeto FinanceFlow"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+
+                <div class="project-top">
+                  <h3 class="h3">
+                    <a class="project-title" href="/projetos/financeflow/"
+                      >FinanceFlow</a
+                    >
+                  </h3>
+                  <span class="badge">Em evolução</span>
+                </div>
+
+                <p class="muted">
+                  Controle financeiro com organização de dados e relatórios
+                  (fase inicial).
+                </p>
+
+                <div class="tags" aria-label="Tecnologias e foco">
+                  <span class="tag">Dados</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">Automação</span>
+                </div>
+
+                <div class="project-actions">
+                  <a class="btn small" href="/projetos/financeflow/"
+                    >Ver case</a
+                  >
+                  <a class="btn small ghost" href="/links/">Links</a>
+                </div>
+              </article>
+            </div>
 
             <div class="cta-row">
-              <a class="btn primary" href="/projetos/">Voltar aos projetos</a>
-              <a class="btn ghost" href="/">Ir para a home</a>
+              <a class="btn primary" href="/contato/">Vamos conversar</a>
+              <a class="btn ghost" href="/curriculo/">Ver currículo</a>
             </div>
-          </article>
+          </div>
+        </section>
+
+        <!-- BLOG -->
+        <section class="section" aria-labelledby="blog-title">
+          <div class="container">
+            <div class="section-head">
+              <h2 class="h2" id="blog-title">Blog</h2>
+              <a class="link" href="/blog/">Ver blog →</a>
+            </div>
+
+            <div class="posts">
+              <article class="post">
+                <a
+                  class="post-cover"
+                  href="blog/Recomeçar na TI depois dos 40/index.html"
+                  aria-label="Ler artigo: Recomeçar na TI depois dos 40"
+                >
+                  <img
+                    src="assets/img/blog/recomecar-ti-40-capa.png"
+                    alt="Capa do artigo: Recomeçar na TI depois dos 40"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+
+                <h3 class="h3">Recomeçar na TI depois dos 40</h3>
+
+                <p class="muted">
+                  Uma jornada real sobre expectativa, frustração, base técnica e
+                  o que sustenta a transição.
+                </p>
+
+                <div class="post-meta muted">Jan 2026 • Carreira</div>
+
+                <a
+                  class="link"
+                  href="blog/Recomeçar na TI depois dos 40/index.html"
+                  >Ler →</a
+                >
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- REDES (deixa, mas discreto) -->
+        <section class="section" aria-labelledby="redes-title">
+          <div class="container">
+            <h2 class="h2" id="redes-title">Minhas redes</h2>
+            <p class="muted">Acompanhe projetos e conteúdo.</p>
+            <div class="social-grid">
+              <a
+                class="social"
+                href="https://www.linkedin.com/in/andre-blos-aliatti-3a680b59/"
+                target="_blank"
+                rel="noreferrer"
+                ><wa-icon name="square-linkedin" family="brands"></wa-icon>
+                LinkedIn</a
+              >
+              <a
+                class="social"
+                href="https://github.com/andreblosaliatti"
+                target="_blank"
+                rel="noreferrer"
+                ><wa-icon name="github" family="brands"></wa-icon> GitHub</a
+              >
+              <a
+                class="social"
+                href="https://www.youtube.com/@andreblosaliatti"
+                target="_blank"
+                rel="noreferrer"
+                ><wa-icon name="youtube" family="brands"></wa-icon> YouTube</a
+              >
+              <a
+                class="social"
+                href="https://www.instagram.com/andreblosaliatti.dev/"
+                target="_blank"
+                rel="noreferrer"
+                ><wa-icon name="instagram" family="brands"></wa-icon>
+                Instagram</a
+              >
+              <a
+                class="social"
+                href="https://medium.com/@andre.blos.aliatti.dev"
+                target="_blank"
+                rel="noreferrer"
+                ><wa-icon name="code"></wa-icon> Medium</a
+              >
+              <a
+                class="social"
+                href="https://dev.to/andre_blos_aliatti"
+                target="_blank"
+                rel="noreferrer"
+                ><wa-icon name="dev" family="brands"></wa-icon> Dev.to</a
+              >
+              <a class="social" href="/links/" target="_blank" rel="noreferrer"
+                ><wa-icon name="x"></wa-icon
+              ></a>
+            </div>
+          </div>
+        </section>
+        <!-- CTA FINAL -->
+        <section class="section" aria-labelledby="contato-title">
+          <div class="container">
+            <h2 class="h2" id="contato-title">Vamos conversar?</h2>
+            <p class="muted">
+              Quer trocar uma ideia sobre um projeto ou oportunidade?
+            </p>
+            <div class="cta-row">
+              <a class="btn primary" href="/contato/">Entrar em contato</a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container footer-inner">
+          <p>© <span id="year"></span> André Blos Aliatti</p>
         </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> André Blos Aliatti</p>
+      </footer>
+      <script src="/js/app.js"></script>
     </div>
-    </footer>
-
-    <script src="/js/app.js"></script>
   </body>
 </html>

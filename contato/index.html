@@ -23,7 +23,9 @@
       src="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/webawesome.loader.js"
     ></script>
 
-    <link rel="icon" href="../../assets/favicon.png" />
+    <!-- Favicon padrão do site -->
+    <link rel="icon" href="/assets/favicon.png" />
+
     <link rel="stylesheet" href="/css/global.css" />
   </head>
 
@@ -46,9 +48,7 @@
           <a class="nav-link-desktop" href="/sobre/">Sobre</a>
           <a class="nav-link-desktop" href="/projetos/">Portfólio</a>
           <a class="nav-link-desktop" href="/blog/">Blog</a>
-          <a class="nav-link-desktop" href="/contato/" aria-current="page"
-            >Contato</a
-          >
+          <a class="nav-link-desktop" href="/contato/" aria-current="page">Contato</a>
         </nav>
 
         <button
@@ -59,7 +59,7 @@
           aria-expanded="false"
           aria-controls="navPanel"
         >
-          <span><wa-icon name="bars"></wa-icon></span>
+          <wa-icon name="bars"></wa-icon>
         </button>
       </div>
 
@@ -68,7 +68,7 @@
           <a class="nav-link" href="/sobre/">Sobre</a>
           <a class="nav-link" href="/projetos/">Projetos</a>
           <a class="nav-link" href="/blog/">Blog</a>
-          <a class="nav-link nav-cta" href="/contato/">Contato</a>
+          <a class="nav-link nav-cta" href="/contato/" aria-current="page">Contato</a>
         </div>
       </nav>
     </header>
@@ -84,8 +84,8 @@
           </h1>
 
           <p class="lead">
-            Me chama para projetos web, freelas, parcerias ou oportunidades. Se
-            puder, inclua contexto e links.
+            Me chama para projetos web, freelas, parcerias ou oportunidades.
+            Se puder, inclua contexto e links.
           </p>
 
           <div class="chips" aria-label="Assuntos">
@@ -115,43 +115,54 @@
                 <label class="field">
                   <span>Nome</span>
                   <input
+                    id="nome"
                     type="text"
                     name="nome"
                     placeholder="Seu nome"
                     autocomplete="name"
                     required
+                    minlength="2"
                   />
+                  <small class="field-error" data-error-for="nome"></small>
                 </label>
 
                 <label class="field">
                   <span>Email</span>
                   <input
+                    id="email"
                     type="email"
                     name="email"
                     placeholder="seu@email.com"
                     autocomplete="email"
                     required
                   />
+                  <small class="field-error" data-error-for="email"></small>
                 </label>
 
                 <label class="field">
                   <span>Assunto</span>
                   <input
+                    id="assunto"
                     type="text"
                     name="assunto"
                     placeholder="Ex.: Site / API / Parceria"
                     required
+                    minlength="3"
                   />
+                  <small class="field-error" data-error-for="assunto"></small>
                 </label>
 
                 <label class="field">
                   <span>Mensagem</span>
                   <textarea
+                    id="mensagem"
                     name="mensagem"
                     rows="6"
                     placeholder="Conte o que você precisa e, se tiver, cole links aqui."
                     required
+                    minlength="10"
                   ></textarea>
+                  <small class="field-error" data-error-for="mensagem"></small>
                 </label>
 
                 <!-- anti-spam -->
@@ -172,7 +183,7 @@
 
                 <div class="form-actions">
                   <button class="btn primary" type="submit" id="sendBtn">
-                    Enviar
+                    Enviar mensagem
                   </button>
                   <a class="btn ghost" href="/projetos/">Ver projetos</a>
                 </div>
@@ -186,7 +197,7 @@
               </form>
             </article>
 
-            <!-- Sidebar (opcional, no padrão de case) -->
+            <!-- Sidebar -->
             <aside class="case-meta" aria-label="Informações">
               <div class="kv">
                 <div class="label">O que eu faço</div>
@@ -198,16 +209,17 @@
                 <div class="value">Java/Spring • React • SQL</div>
               </div>
 
+              <div class="kv">
+                <div class="label">Alternativas</div>
+                <div class="value">
+                  <a class="link" href="/links/">Links →</a>
+                </div>
+              </div>
             </aside>
           </div>
 
-          <!-- Sucesso (mesma página) -->
-          <article
-            class="card success"
-            id="successCard"
-            hidden
-            style="margin-top: 18px"
-          >
+          <!-- Sucesso: começa escondido -->
+          <article class="card success" id="successCard" hidden style="margin-top: 18px">
             <div class="success-title">
               <wa-icon name="circle-check"></wa-icon>
               <h2 class="h2" style="margin: 0">Mensagem enviada!</h2>
@@ -229,7 +241,7 @@
     <footer class="footer">
       <div class="container footer-inner">
         <p>© <span id="year"></span> André Blos Aliatti</p>
-      </div>
+    </div>
     </footer>
 
     <script src="/js/app.js"></script>
