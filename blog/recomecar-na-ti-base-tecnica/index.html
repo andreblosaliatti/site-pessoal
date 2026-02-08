@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>
+      Recomeçar na TI depois dos 40: por que estudar a base técnica importa mais
+      do que escolher uma stack — André Blos Aliatti
+    </title>
+    <meta
+      name="description"
+      content="Um artigo técnico sobre por que fundamentos sustentam qualquer stack: lógica, orientação a objetos, HTTP/REST e SQL — e como a pressa cria dívida técnica."
+    />
+
+    <meta name="author" content="André Blos Aliatti" />
+    <meta name="robots" content="index, follow" />
+
+    <link
+      rel="canonical"
+      href="https://andreblosaliatti.dev/blog/recomecar-na-ti-base-tecnica/"
+    />
+
+    <meta
+      property="og:title"
+      content="Recomeçar na TI depois dos 40: por que base técnica importa mais do que stack"
+    />
+    <meta
+      property="og:description"
+      content="Fundamentos que sustentam qualquer stack: lógica, OO, HTTP/REST e SQL — e como a pressa cria dívida técnica invisível."
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://andreblosaliatti.dev/blog/recomecar-na-ti-base-tecnica/"
+    />
+    <meta property="og:image" content="/assets/img/blog/base-tecnica-capa.png" />
+
+    <!-- Web Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/styles/themes/default.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/webawesome.loader.js"
+    ></script>
+
+    <link rel="icon" href="../../assets/favicon.png" />
+    <link rel="stylesheet" href="../../css/global.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="header">
+      <div class="container header-row">
+        <a class="brand" href="../../index.html" aria-label="Voltar para Home">
+          <img
+            class="brand-logo"
+            src="../../assets/img/logo-andre-transp.png"
+            alt="André Blos Aliatti"
+            onerror="this.style.display = 'none'"
+          />
+          <span class="brand-text">André Blos Aliatti</span>
+        </a>
+
+        <nav class="nav-desktop" aria-label="Navegação principal">
+          <a class="nav-link-desktop" href="/sobre/">Sobre</a>
+          <a class="nav-link-desktop" href="/projetos/">Portfólio</a>
+          <a class="nav-link-desktop" href="/blog/" aria-current="page">Blog</a>
+          <a class="nav-link-desktop" href="/contato/">Contato</a>
+        </nav>
+
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="navPanel"
+        >
+          <wa-icon name="bars"></wa-icon>
+        </button>
+      </div>
+
+      <nav class="nav-panel" id="navPanel" hidden>
+        <div class="container nav-inner">
+          <a class="nav-link" href="/sobre/">Sobre</a>
+          <a class="nav-link" href="/projetos/">Projetos</a>
+          <a class="nav-link" href="/blog/" aria-current="page">Blog</a>
+          <a class="nav-link nav-cta" href="/contato/">Contato</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="conteudo" class="main">
+      <!-- HERO -->
+      <section class="section hero">
+        <div class="container">
+          <p class="eyebrow">ARTIGO</p>
+
+          <h1 class="h1">
+            Recomeçar na TI depois dos 40: por que estudar a base técnica importa
+            mais do que escolher uma stack
+            <span class="h1-accent">
+              Fundamentos sustentam qualquer tecnologia — lógica, OO, HTTP/REST e
+              SQL. A pressa cobra juros no código.
+            </span>
+          </h1>
+
+          <p class="muted">Fev 2026 • 7–9 min de leitura</p>
+
+          <div class="chips">
+            <span class="chip">Fundamentos</span>
+            <span class="chip">Aprendizado</span>
+            <span class="chip">Backend</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPA -->
+      <section class="section">
+        <div class="container">
+          <div class="post-cover">
+            <img
+              src="../../assets/img/blog/base-tecnica-capa.png"
+              alt="Capa do artigo: Recomeçar na TI depois dos 40 — base técnica"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTEÚDO -->
+      <section class="section">
+        <div class="container">
+          <article class="card article">
+            <h2 class="h2">Introdução</h2>
+
+            <p>
+              Meu nome é André Blos Aliatti e, ao recomeçar na área de tecnologia
+              depois dos 40, uma coisa ficou clara muito rápido: o maior erro
+              técnico não é escolher a linguagem errada — é pular a base.
+            </p>
+
+            <p>
+              Existe muita ansiedade em torno de frameworks, stacks e atalhos.
+              Mas software não é feito de ferramentas isoladas. Ele é sustentado
+              por conceitos.
+            </p>
+
+            <p>
+              Este artigo é técnico. Não é sobre carreira, nem sobre motivação.
+              É sobre por que fundamentos importam e como a pressa gera
+              problemas reais no código.
+            </p>
+
+            <h2 class="h2">Software é estrutura antes de ser tecnologia</h2>
+
+            <p>
+              Toda aplicação, independentemente da stack, resolve variações do
+              mesmo conjunto de problemas:
+            </p>
+
+            <ul class="about-list">
+              <li>entrada de dados</li>
+              <li>validação</li>
+              <li>regras de negócio</li>
+              <li>persistência</li>
+              <li>comunicação entre partes</li>
+              <li>manutenção ao longo do tempo</li>
+            </ul>
+
+            <p>
+              Esses problemas não mudam quando você troca Java por JavaScript,
+              ou Spring por Node. O que muda é a forma de expressar a solução.
+            </p>
+
+            <p>
+              Por isso, estudar apenas “como usar um framework” sem entender o
+              que ele está abstraindo cria um desenvolvedor dependente da
+              ferramenta — e não do raciocínio.
+            </p>
+
+            <h2 class="h2">Lógica e algoritmos não são etapa inicial — são permanentes</h2>
+
+            <p>
+              Um erro comum é tratar lógica de programação como algo que se
+              “supera” rápido. Na prática, lógica e algoritmos aparecem o tempo
+              todo:
+            </p>
+
+            <ul class="about-list">
+              <li>decisões condicionais mal pensadas viram bugs</li>
+              <li>loops mal estruturados viram problemas de performance</li>
+              <li>estruturas de dados erradas viram sistemas difíceis de escalar</li>
+            </ul>
+
+            <p>
+              Mesmo em aplicações simples, conceitos como complexidade, fluxo de
+              execução, estados e dependência entre dados estão sempre presentes.
+            </p>
+
+            <p>
+              Quem ignora isso acaba resolvendo tudo com “tentativa e erro”, o
+              que não escala em projetos reais.
+            </p>
+
+            <h2 class="h2">Orientação a Objetos não é sintaxe — é modelagem</h2>
+
+            <p>
+              Muita gente aprende orientação a objetos decorando palavras-chave:
+              <em>class</em>, <em>extends</em>, <em>implements</em>. Isso não é
+              OO.
+            </p>
+
+            <p>
+              OO é sobre modelar o problema de forma que o código reflita a
+              realidade do domínio.
+            </p>
+
+            <p>Conceitos como:</p>
+
+            <ul class="about-list">
+              <li>responsabilidade única</li>
+              <li>encapsulamento</li>
+              <li>coesão</li>
+              <li>acoplamento</li>
+            </ul>
+
+            <p>definem se um sistema será:</p>
+
+            <ul class="about-list">
+              <li>fácil de entender</li>
+              <li>fácil de testar</li>
+              <li>fácil de evoluir</li>
+            </ul>
+
+            <p>
+              ou se ele vai virar um emaranhado onde qualquer mudança quebra
+              outra coisa.
+            </p>
+
+            <p>
+              Frameworks modernos assumem que você entende isso. Se não entende,
+              eles apenas escondem o problema por um tempo.
+            </p>
+
+            <h2 class="h2">HTTP, REST e contratos: o que realmente sustenta APIs</h2>
+
+            <p>Criar uma API não é expor endpoints. É definir contratos claros.</p>
+
+            <p>Sem entender bem:</p>
+
+            <ul class="about-list">
+              <li>HTTP verbs</li>
+              <li>status codes</li>
+              <li>semântica de requisições e respostas</li>
+              <li>idempotência</li>
+              <li>erros e exceções</li>
+            </ul>
+
+            <p>a API até “funciona”, mas:</p>
+
+            <ul class="about-list">
+              <li>fica difícil de consumir</li>
+              <li>quebra facilmente</li>
+              <li>exige gambiarras no frontend</li>
+            </ul>
+
+            <p>
+              Estudar REST não é decorar padrões. É entender comunicação entre
+              sistemas, algo que vale para qualquer arquitetura distribuída.
+            </p>
+
+            <h2 class="h2">Banco de dados: SQL não é detalhe de implementação</h2>
+
+            <p>
+              Outro erro comum é tratar banco de dados como algo secundário. Mas
+              decisões ruins aqui cobram juros altos depois.
+            </p>
+
+            <p>Entender:</p>
+
+            <ul class="about-list">
+              <li>modelagem relacional</li>
+              <li>chaves primárias e estrangeiras</li>
+              <li>normalização</li>
+              <li>índices</li>
+              <li>transações</li>
+            </ul>
+
+            <p>impacta diretamente:</p>
+
+            <ul class="about-list">
+              <li>performance</li>
+              <li>consistência</li>
+              <li>confiabilidade do sistema</li>
+            </ul>
+
+            <p>
+              Frameworks ORM ajudam, mas não substituem entendimento de SQL. Quem
+              ignora isso costuma culpar a ferramenta por problemas que são de
+              modelagem.
+            </p>
+
+            <h2 class="h2">A pressa cria dívidas técnicas invisíveis</h2>
+
+            <p>
+              Pressa em software quase nunca aparece no começo. Ela aparece meses
+              depois.
+            </p>
+
+            <p>Sintomas clássicos:</p>
+
+            <ul class="about-list">
+              <li>código difícil de alterar</li>
+              <li>medo de mexer em partes “sensíveis”</li>
+              <li>ausência de testes</li>
+              <li>lógica espalhada em vários lugares</li>
+            </ul>
+
+            <p>
+              Na maioria das vezes, isso não vem de incompetência — vem de
+              atropelar fundamentos para “chegar logo no resultado”.
+            </p>
+
+            <p>
+              Estudar base parece lento, mas evita refatorações dolorosas no
+              futuro.
+            </p>
+
+            <h2 class="h2">O que focar quando se está começando (ou recomeçando)</h2>
+
+            <p>
+              Independentemente da idade, algumas prioridades técnicas fazem
+              diferença real:
+            </p>
+
+            <ul class="about-list">
+              <li>lógica e estruturas de controle</li>
+              <li>orientação a objetos bem entendida</li>
+              <li>HTTP e APIs</li>
+              <li>SQL e modelagem</li>
+              <li>leitura de código alheio</li>
+              <li>pequenos projetos bem feitos</li>
+            </ul>
+
+            <p>
+              Stack vem depois. Framework vem depois. “Especialização” vem depois.
+            </p>
+
+            <p><strong>Base não é fase. É sustentação.</strong></p>
+
+            <h2 class="h2">Conclusão: software sólido nasce de conceitos claros</h2>
+
+            <p>Tecnologia muda. Conceitos permanecem.</p>
+
+            <p>Quem constrói com base consegue:</p>
+
+            <ul class="about-list">
+              <li>trocar de stack sem trauma</li>
+              <li>entender frameworks novos mais rápido</li>
+              <li>resolver problemas fora do “caminho feliz”</li>
+              <li>evoluir tecnicamente com consistência</li>
+            </ul>
+
+            <p>
+              Não ter pressa não é andar devagar. É andar na direção certa.
+            </p>
+
+            <hr />
+
+            <h2 class="h2">Assinatura</h2>
+
+            <p class="muted">
+              André Blos Aliatti é desenvolvedor em construção, compartilhando
+              sua jornada real na tecnologia, com foco em backend, frontend e
+              projetos práticos.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn primary" href="/blog/">Voltar ao blog</a>
+              <a class="btn ghost" href="/projetos/">Ver projetos</a>
+            </div>
+
+            <footer class="post-tags">
+              <span>Tags:</span>
+              <a href="/tag/andre-blos-aliatti/">André Blos Aliatti</a>
+              <a href="/tag/fundamentos/">Fundamentos</a>
+              <a href="/tag/orientacao-a-objetos/">Orientação a Objetos</a>
+              <a href="/tag/apis-rest/">APIs REST</a>
+              <a href="/tag/sql/">SQL</a>
+              <a href="/tag/recomecar-na-ti/">Recomeçar na TI</a>
+            </footer>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> André Blos Aliatti</p>
+      </div>
+    </footer>
+
+    <script src="../../js/app.js"></script>
+  </body>
+</html>
