@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>
+      Programação Orientada a Objetos: como modelar sistemas corretamente —
+      André Blos Aliatti
+    </title>
+    <meta
+      name="description"
+      content="Entenda o verdadeiro objetivo da Programação Orientada a Objetos: modelar sistemas complexos com encapsulamento, responsabilidade, coesão e baixo acoplamento."
+    />
+
+    <meta name="author" content="André Blos Aliatti" />
+    <meta name="robots" content="index, follow" />
+
+    <link
+      rel="canonical"
+      href="https://andreblosaliatti.dev/blog/oop-modelagem-de-sistemas/"
+    />
+
+    <meta
+      property="og:title"
+      content="Programação Orientada a Objetos: como modelar sistemas corretamente"
+    />
+    <meta
+      property="og:description"
+      content="O verdadeiro objetivo da POO não é decorar classes e palavras-chave, mas modelar sistemas complexos de forma compreensível e evolutiva."
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://andreblosaliatti.dev/blog/oop-modelagem-de-sistemas/"
+    />
+    <meta property="og:image" content="/assets/img/blog/oop-modelagem-capa.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Programação Orientada a Objetos: como modelar sistemas corretamente"
+    />
+    <meta
+      name="twitter:description"
+      content="POO não é sobre classes. É sobre modelar sistemas com encapsulamento, responsabilidade, coesão e baixo acoplamento."
+    />
+    <meta name="twitter:image" content="/assets/img/blog/oop-modelagem-capa.png" />
+
+    <!-- Web Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/styles/themes/default.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/webawesome.loader.js"
+    ></script>
+
+    <link rel="icon" href="../../assets/favicon.png" />
+    <link rel="stylesheet" href="../../css/global.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="header">
+      <div class="container header-row">
+        <a class="brand" href="../../index.html" aria-label="Voltar para Home">
+          <img
+            class="brand-logo"
+            src="../../assets/img/logo-andre-transp.png"
+            alt="André Blos Aliatti"
+            onerror="this.style.display = 'none'"
+          />
+          <span class="brand-text">André Blos Aliatti</span>
+        </a>
+
+        <nav class="nav-desktop" aria-label="Navegação principal">
+          <a class="nav-link-desktop" href="/sobre/">Sobre</a>
+          <a class="nav-link-desktop" href="/projetos/">Portfólio</a>
+          <a class="nav-link-desktop" href="/blog/" aria-current="page">Blog</a>
+          <a class="nav-link-desktop" href="/contato/">Contato</a>
+        </nav>
+
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="navPanel"
+        >
+          <wa-icon name="bars"></wa-icon>
+        </button>
+      </div>
+
+      <nav class="nav-panel" id="navPanel" hidden>
+        <div class="container nav-inner">
+          <a class="nav-link" href="/sobre/">Sobre</a>
+          <a class="nav-link" href="/projetos/">Projetos</a>
+          <a class="nav-link" href="/blog/" aria-current="page">Blog</a>
+          <a class="nav-link nav-cta" href="/contato/">Contato</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="conteudo" class="main">
+      <!-- HERO -->
+      <section class="section hero">
+        <div class="container">
+          <p class="eyebrow">ARTIGO</p>
+
+          <h1 class="h1">
+            Programação Orientada a Objetos Não É Sobre Classes — É Sobre
+            Modelar Sistemas
+            <span class="h1-accent">
+              O foco real da POO não é sintaxe. É organizar sistemas complexos
+              com responsabilidade, encapsulamento, coesão e baixo acoplamento.
+            </span>
+          </h1>
+
+          <p class="muted">Mar 2026 • 8–10 min de leitura</p>
+
+          <div class="chips">
+            <span class="chip">POO</span>
+            <span class="chip">Arquitetura</span>
+            <span class="chip">Fundamentos</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPA -->
+      <section class="section">
+        <div class="container">
+          <div class="post-cover">
+            <img
+              src="../../assets/img/blog/oop-modelagem-capa.png"
+              alt="Capa do artigo: Programação Orientada a Objetos não é sobre classes — é sobre modelar sistemas"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTEÚDO -->
+      <section class="section">
+        <div class="container">
+          <article class="card article">
+            <p class="muted">Por André Blos Aliatti</p>
+
+            <p>
+              Quando alguém começa a estudar Programação Orientada a Objetos
+              (POO), normalmente o foco inicial está na sintaxe da linguagem.
+            </p>
+
+            <p>Aprendemos rapidamente conceitos como:</p>
+
+            <ul class="about-list">
+              <li><code>class</code></li>
+              <li><code>extends</code></li>
+              <li><code>implements</code></li>
+              <li><code>private</code></li>
+              <li><code>public</code></li>
+            </ul>
+
+            <p>
+              E é comum acreditar que dominar essas palavras significa entender
+              orientação a objetos.
+            </p>
+
+            <p>Mas essa é apenas a superfície.</p>
+
+            <p>
+              A Programação Orientada a Objetos surgiu para resolver um problema
+              muito mais profundo da engenharia de software: como organizar
+              sistemas complexos de forma que continuem compreensíveis e fáceis
+              de evoluir conforme crescem?
+            </p>
+
+            <p>
+              Classes são apenas uma ferramenta. O verdadeiro objetivo da POO é
+              modelar corretamente um domínio.
+            </p>
+
+            <h2 class="h2">Software Sempre Representa Um Domínio</h2>
+
+            <p>Todo sistema representa algum tipo de realidade.</p>
+
+            <p>Por exemplo:</p>
+
+            <ul class="about-list">
+              <li>um sistema de clínica médica</li>
+              <li>uma plataforma de e-commerce</li>
+              <li>um sistema financeiro</li>
+              <li>um software de gestão de eventos</li>
+            </ul>
+
+            <p>Cada domínio possui:</p>
+
+            <ul class="about-list">
+              <li>entidades</li>
+              <li>relações</li>
+              <li>comportamentos</li>
+              <li>regras de negócio</li>
+            </ul>
+
+            <p>
+              A Programação Orientada a Objetos permite representar esses
+              elementos diretamente no código.
+            </p>
+
+            <p>
+              Em um sistema médico, por exemplo, podemos identificar objetos
+              como:
+            </p>
+
+            <ul class="about-list">
+              <li>Paciente</li>
+              <li>Médico</li>
+              <li>Consulta</li>
+              <li>Prescrição</li>
+            </ul>
+
+            <p>Mas esses objetos não são apenas estruturas de dados.</p>
+
+            <p>
+              Eles representam conceitos do mundo real com comportamento
+              associado.
+            </p>
+
+            <p>Um modelo fraco seria algo assim:</p>
+
+            <pre><code>class Paciente {
+    String nome;
+    int idade;
+    String cpf;
+}</code></pre>
+
+            <p>
+              Nesse caso o objeto apenas armazena informações.
+            </p>
+
+            <p>
+              Um modelo melhor começa a incorporar comportamentos do domínio:
+            </p>
+
+            <pre><code>class Paciente {
+
+    void registrarConsulta() { }
+
+    void atualizarEndereco() { }
+
+    void adicionarHistoricoMedico() { }
+
+}</code></pre>
+
+            <p>A diferença é fundamental.</p>
+
+            <p>
+              Objetos não deveriam existir apenas para guardar dados, mas para
+              representar responsabilidades dentro do sistema.
+            </p>
+
+            <h2 class="h2">Encapsulamento Protege Regras do Sistema</h2>
+
+            <p>
+              Encapsulamento costuma ser explicado apenas como “deixar atributos
+              privados”.
+            </p>
+
+            <p>Essa explicação é incompleta.</p>
+
+            <p>
+              O verdadeiro objetivo do encapsulamento é proteger invariantes.
+            </p>
+
+            <p>
+              Invariantes são regras que nunca podem ser quebradas dentro do
+              sistema.
+            </p>
+
+            <p>Por exemplo:</p>
+
+            <ul class="about-list">
+              <li>uma consulta sempre deve estar associada a um paciente</li>
+              <li>um pagamento nunca pode ser negativo</li>
+              <li>uma prescrição sempre pertence a uma consulta</li>
+            </ul>
+
+            <p>
+              Se qualquer parte do sistema puder alterar diretamente os dados
+              internos de um objeto, essas regras podem ser quebradas
+              facilmente.
+            </p>
+
+            <p>Exemplo de código frágil:</p>
+
+            <pre><code>consulta.paciente = null;
+consulta.data = null;</code></pre>
+
+            <p>
+              Quando o sistema exige que mudanças ocorram através de métodos, o
+              próprio objeto passa a garantir suas regras internas.
+            </p>
+
+            <pre><code>consulta.agendar(paciente, data);</code></pre>
+
+            <p>
+              Agora a lógica que garante a consistência está dentro do próprio
+              objeto.
+            </p>
+
+            <p>
+              Encapsulamento não é apenas esconder dados. É proteger a
+              integridade do modelo.
+            </p>
+
+            <h2 class="h2">Responsabilidade Define um Bom Design</h2>
+
+            <p>
+              Uma das perguntas mais importantes ao projetar software orientado a
+              objetos é:
+            </p>
+
+            <p><strong>Quem é responsável por este comportamento?</strong></p>
+
+            <p>
+              Quando essa responsabilidade não é clara, surgem padrões
+              problemáticos.
+            </p>
+
+            <p>
+              É comum ver sistemas onde quase toda a lógica fica em classes de
+              serviço gigantes:
+            </p>
+
+            <ul class="about-list">
+              <li><code>UserService</code></li>
+              <li><code>UserValidator</code></li>
+              <li><code>UserManager</code></li>
+              <li><code>UserUtils</code></li>
+            </ul>
+
+            <p>
+              Enquanto a própria classe <code>User</code> possui apenas
+              atributos.
+            </p>
+
+            <p>
+              Esse padrão é chamado de modelo de domínio anêmico.
+            </p>
+
+            <p>
+              Em sistemas bem projetados, os objetos devem concentrar a lógica
+              relacionada a eles.
+            </p>
+
+            <h2 class="h2">Coesão e Acoplamento</h2>
+
+            <p>
+              Dois conceitos fundamentais influenciam diretamente a qualidade de
+              um sistema.
+            </p>
+
+            <h3 class="h3">Coesão</h3>
+
+            <p>
+              Coesão mede o quanto as responsabilidades de uma classe estão
+              relacionadas entre si.
+            </p>
+
+            <p>Classes com alta coesão possuem uma função clara.</p>
+
+            <p>
+              Classes com baixa coesão tendem a virar “classes Deus”,
+              responsáveis por tudo.
+            </p>
+
+            <p>Exemplo de baixa coesão:</p>
+
+            <pre><code>UserService
+registrarUsuario()
+gerarFatura()
+enviarEmail()
+calcularImpostos()</code></pre>
+
+            <p>
+              Essas responsabilidades claramente pertencem a partes diferentes do
+              sistema.
+            </p>
+
+            <h3 class="h3">Acoplamento</h3>
+
+            <p>
+              Acoplamento mede o quanto diferentes partes do sistema dependem
+              umas das outras.
+            </p>
+
+            <p>
+              Alto acoplamento significa que pequenas mudanças geram efeitos em
+              várias áreas do código.
+            </p>
+
+            <p>
+              Baixo acoplamento torna o sistema mais flexível e fácil de
+              evoluir.
+            </p>
+
+            <p>Um bom design orientado a objetos busca sempre:</p>
+
+            <ul class="about-list">
+              <li>alta coesão</li>
+              <li>baixo acoplamento</li>
+            </ul>
+
+            <h2 class="h2">Comportamento É Mais Importante Que Dados</h2>
+
+            <p>
+              Um erro muito comum é tratar objetos apenas como estruturas de
+              dados.
+            </p>
+
+            <p>
+              Isso acontece com frequência em projetos que utilizam frameworks
+              modernos.
+            </p>
+
+            <p>Por exemplo:</p>
+
+            <pre><code>class Pedido {
+    int quantidade;
+    double preco;
+}</code></pre>
+
+            <p>
+              E depois toda a lógica é colocada em outra classe:
+            </p>
+
+            <pre><code>PedidoService.calcularTotal(pedido);</code></pre>
+
+            <p>Mas o comportamento pertence ao próprio objeto.</p>
+
+            <p>Um design mais natural seria:</p>
+
+            <pre><code>pedido.calcularTotal();</code></pre>
+
+            <p>
+              Assim o objeto passa a ser responsável pela própria lógica.
+            </p>
+
+            <h2 class="h2">POO Como Base das Arquiteturas Modernas</h2>
+
+            <p>
+              Muitas arquiteturas modernas assumem que o desenvolvedor compreende
+              bem os fundamentos da orientação a objetos.
+            </p>
+
+            <p>Entre elas:</p>
+
+            <ul class="about-list">
+              <li>Domain-Driven Design (DDD)</li>
+              <li>Clean Architecture</li>
+              <li>Arquitetura Hexagonal</li>
+              <li>Arquitetura em Camadas</li>
+            </ul>
+
+            <p>
+              Todas essas abordagens dependem da capacidade de modelar
+              corretamente o domínio do sistema.
+            </p>
+
+            <p>
+              Sem essa base conceitual, esses padrões viram apenas estruturas
+              complexas sem propósito claro.
+            </p>
+
+            <h2 class="h2">O Custo de Ignorar os Fundamentos</h2>
+
+            <p>
+              Quando os fundamentos da orientação a objetos são ignorados, os
+              sistemas começam a apresentar sintomas conhecidos:
+            </p>
+
+            <ul class="about-list">
+              <li>classes de serviço gigantes</li>
+              <li>lógica de negócio espalhada pelo sistema</li>
+              <li>duplicação de regras</li>
+              <li>refatorações perigosas</li>
+              <li>crescimento rápido da dívida técnica</li>
+            </ul>
+
+            <p>O sistema funciona no início.</p>
+
+            <p>
+              Mas conforme cresce, cada alteração passa a custar mais.
+            </p>
+
+            <h2 class="h2">Como Aprender Orientação a Objetos de Verdade</h2>
+
+            <p>
+              Em vez de focar apenas na sintaxe da linguagem, é mais útil
+              desenvolver a capacidade de:
+            </p>
+
+            <ul class="about-list">
+              <li>modelar domínios reais</li>
+              <li>definir responsabilidades claras</li>
+              <li>proteger invariantes</li>
+              <li>reduzir acoplamento</li>
+              <li>criar objetos com comportamento</li>
+            </ul>
+
+            <p>
+              Projetos pequenos, mas bem estruturados, são a melhor forma de
+              aprender esses conceitos.
+            </p>
+
+            <h2 class="h2">Conclusão</h2>
+
+            <p>
+              Programação Orientada a Objetos não é apenas um recurso de
+              linguagem. É uma forma de pensar sobre sistemas.
+            </p>
+
+            <p>Quando bem aplicada, ela permite construir software que:</p>
+
+            <ul class="about-list">
+              <li>permanece compreensível</li>
+              <li>evolui com segurança</li>
+              <li>escala em complexidade</li>
+            </ul>
+
+            <p>
+              Avançar devagar nos fundamentos pode parecer frustrante no começo.
+            </p>
+
+            <p>
+              Mas na engenharia de software, estrutura sempre vence velocidade.
+            </p>
+
+            <hr />
+
+            <h2 class="h2">Assinatura</h2>
+
+            <p class="muted">
+              André Blos Aliatti — desenvolvedor documentando o processo de
+              aprendizado em engenharia de software e construção de sistemas
+              reais.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn primary" href="/blog/">Voltar ao blog</a>
+              <a class="btn ghost" href="/projetos/">Ver projetos</a>
+            </div>
+
+            <footer class="post-tags">
+              <span>Tags:</span>
+              <a href="/tag/programacao-orientada-a-objetos/">Programação Orientada a Objetos</a>
+              <a href="/tag/oop/">OOP</a>
+              <a href="/tag/modelagem-de-sistemas/">Modelagem de Sistemas</a>
+              <a href="/tag/arquitetura-de-software/">Arquitetura de Software</a>
+              <a href="/tag/fundamentos/">Fundamentos</a>
+              <a href="/tag/andre-blos-aliatti/">André Blos Aliatti</a>
+            </footer>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> André Blos Aliatti</p>
+      </div>
+    </footer>
+
+    <script src="../../js/app.js"></script>
+  </body>
+</html>
