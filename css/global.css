@@ -702,6 +702,19 @@ p{ margin: 0 0 var(--space-3); }
   flex-wrap: wrap;
 }
 
+
+.footer-seo{
+  flex-basis: 100%;
+  margin: 0;
+  max-width: 85ch;
+}
+
+.footer-links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  flex-basis: 100%;
+}
 .link{ text-decoration: none; font-weight: 800; }
 .link:hover{ text-decoration: underline; }
 

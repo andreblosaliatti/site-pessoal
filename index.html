@@ -3,27 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>André Blos Aliatti | Desenvolvedor Web Full Stack</title>
+    <title>André Blos Aliatti — Desenvolvedor Backend Java</title>
     <meta
       name="description"
-      content="Portfólio de André Blos Aliatti — projetos web, frontend e backend. Cases, artigos e contato."
+      content="André Blos Aliatti é desenvolvedor backend Java com foco em Spring Boot, APIs REST, PostgreSQL, projetos reais, jornada de transição para TI e evolução contínua."
     />
-
     <meta name="author" content="André Blos Aliatti" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://andreblosaliatti.dev/" />
 
     <meta
       property="og:title"
-      content="André Blos Aliatti | Desenvolvedor Web Full Stack"
+      content="André Blos Aliatti — Desenvolvedor Backend Java"
     />
     <meta
       property="og:description"
-      content="Projetos, cases e conteúdo técnico sobre frontend e backend."
+      content="Conheça a trajetória, projetos e conteúdos técnicos de André Blos Aliatti."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://andreblosaliatti.dev/" />
     <meta property="og:image" content="/assets/img/og-default.png" />
-    <!-- Web Awesome (CDN correto) -->
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/styles/themes/default.css"
@@ -32,501 +32,292 @@
       type="module"
       src="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.1.0/dist-cdn/webawesome.loader.js"
     ></script>
-
     <link rel="icon" href="/assets/favicon.png" />
     <link rel="stylesheet" href="/css/global.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "André Blos Aliatti",
+        "url": "https://andreblosaliatti.dev/",
+        "jobTitle": "Desenvolvedor Backend Java",
+        "knowsAbout": [
+          "Java",
+          "Spring Boot",
+          "APIs REST",
+          "PostgreSQL",
+          "Arquitetura de Software"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/andre-blos-aliatti-3a680b59/",
+          "https://github.com/andreblosaliatti"
+        ]
+      }
+    </script>
   </head>
 
   <body>
-    <div class="container">
-      <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-      <header class="header">
-        <div class="container header-row">
-          <a class="brand" href="index.html" aria-label="Voltar para Home">
-            <img
-              class="brand-logo"
-              src="assets/img/logo-andre-transp.png"
-              alt="André Blos Aliatti"
-              onerror="this.style.display = 'none'"
-            />
-            <span class="brand-text">André Blos Aliatti</span>
-          </a>
-          <!-- NAV DESKTOP (estilo print) -->
-          <nav class="nav-desktop" aria-label="Navegação principal">
-            <a class="nav-link-desktop" href="/sobre/">Sobre</a>
-            <a class="nav-link-desktop" href="/projetos/">Portfólio</a>
-            <a class="nav-link-desktop" href="/blog/">Blog</a>
-            <a class="nav-link-desktop" href="/contato/">Contato</a>
-          </nav>
-          <!-- MENU MOBILE -->
-          <button
-            class="menu-btn"
-            id="menuBtn"
-            type="button"
-            aria-label="Abrir menu"
-            aria-expanded="false"
-            aria-controls="navPanel"
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="header">
+      <div class="container header-row">
+        <a class="brand" href="/" aria-label="Voltar para Home">
+          <img
+            class="brand-logo"
+            src="/assets/img/logo-andre-transp.png"
+            alt="André Blos Aliatti"
+            onerror="this.style.display='none'"
+          />
+          <span class="brand-text">André Blos Aliatti</span>
+        </a>
+
+        <nav class="nav-desktop" aria-label="Navegação principal">
+          <a class="nav-link-desktop" href="/" aria-current="page">Início</a>
+          <a class="nav-link-desktop" href="/quem-e-andre-blos-aliatti/"
+            >Quem é André Blos Aliatti</a
           >
-            <wa-icon name="bars"></wa-icon>
-          </button>
-        </div>
-        <nav class="nav-panel" id="navPanel" hidden>
-          <div class="container nav-inner">
-            <a class="nav-link" href="/sobre/">Sobre</a>
-            <a class="nav-link" href="/projetos/">Projetos</a>
-            <a class="nav-link" href="/blog/">Blog</a>
-            <a class="nav-link nav-cta" href="/contato/">Contato</a>
-          </div>
+          <a class="nav-link-desktop" href="/projetos-andre-blos-aliatti/"
+            >Projetos</a
+          >
+          <a class="nav-link-desktop" href="/jornada-recomecar-ti-depois-dos-40/"
+            >Jornada</a
+          >
+          <a class="nav-link-desktop" href="/blog/">Blog</a>
+          <a class="nav-link-desktop" href="/medicflow/">MedicFlow</a>
+          <a class="nav-link-desktop" href="/contato/">Contato</a>
         </nav>
-      </header>
-      <main id="conteudo" class="main">
-        <!-- HERO (mais parecido com o print: limpo e com respiro) -->
-        <section class="section hero">
-          <div class="container">
-            <h1 class="h1">
-              ANDRÉ BLOS ALIATTI
-              <span class="h1-accent">Web. Frontend. Backend.</span>
-            </h1>
-            <p class="lead">
-              Construo soluções web completas — interfaces modernas e backends
-              bem estruturados — com foco em performance, clareza e evolução
-              contínua.
-            </p>
-            <div class="hero-actions">
-              <a class="btn primary" href="/projetos/">Conheça meu trabalho</a>
-            </div>
-          </div>
-        </section>
-        <!-- SOBRE MIM (igual print: foto à esquerda no desktop) -->
-        <section class="section" aria-labelledby="sobre-title">
-          <div class="container">
-            <h2 class="h2" id="sobre-title">Sobre mim</h2>
-            <div class="about">
-              <div class="about-photo">
-                <img
-                  src="assets/img/foto-andre.png"
-                  alt="Foto de André Blos Aliatti"
-                />
-              </div>
-              <div class="about-copy">
-                <p class="muted">
-                  Desenvolvedor web com foco em projetos completos, combinando
-                  frontend bem cuidado e backend consistente. Gosto de organizar
-                  sistemas pensando em clareza e evolução.
-                </p>
-                <ul class="about-list">
-                  <li>Web apps e interfaces responsivas</li>
-                  <li>APIs e regras de negócio</li>
-                  <li>Arquitetura, padrões e organização</li>
-                  <li>Documentação e comunicação técnica</li>
-                </ul>
-                <a class="btn primary small" href="/sobre/">Saiba mais</a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- PORTFÓLIO -->
-        <section class="section" aria-labelledby="projetos-title">
-          <div class="container">
-            <div class="section-head">
-              <h2 class="h2" id="projetos-title">Portfólio</h2>
-              <a class="link" href="/projetos/">Ver todos →</a>
-            </div>
 
-            <div class="project-list">
-              <!-- 1) MedicFlow -->
-              <article class="project">
-                <a
-                  class="project-cover"
-                  href="/projetos/medicflow/"
-                  aria-label="Ver case do MedicFlow"
-                >
-                  <img
-                    src="assets/img/projects/medicflow.png"
-                    alt="Preview do projeto MedicFlow"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </a>
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="navPanel"
+        >
+          <wa-icon name="bars"></wa-icon>
+        </button>
+      </div>
 
-                <div class="project-top">
-                  <h3 class="h3">
-                    <a class="project-title" href="/projetos/medicflow/"
-                      >MedicFlow</a
-                    >
-                  </h3>
-                  <span class="badge">SaaS</span>
-                </div>
-
-                <p class="muted">
-                  Plataforma de gestão clínica com agenda, prontuário e
-                  automações.
-                </p>
-
-                <div class="tags" aria-label="Tecnologias e foco">
-                  <span class="tag">Fullstack</span>
-                  <span class="tag">Java</span>
-                  <span class="tag">React</span>
-                </div>
-
-                <div class="project-actions">
-                  <a class="btn small" href="/projetos/medicflow/">Ver case</a>
-                  <a class="btn small ghost" href="/links/">Links</a>
-                </div>
-              </article>
-
-              <!-- 2) DSCommerce (DevSuperior) -->
-              <article class="project">
-                <a
-                  class="project-cover"
-                  href="/projetos/dscommerce/"
-                  aria-label="Ver case do DSCommerce"
-                >
-                  <img
-                    src="assets/img/projects/dscommerce.png"
-                    alt="Preview do projeto DSCommerce"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </a>
-
-                <div class="project-top">
-                  <h3 class="h3">
-                    <a class="project-title" href="/projetos/dscommerce/"
-                      >DSCommerce</a
-                    >
-                  </h3>
-                  <span class="badge">Fullstack</span>
-                </div>
-
-                <p class="muted">
-                  Projeto fullstack (DevSuperior) com backend e frontend
-                  integrados.
-                </p>
-
-                <div class="tags" aria-label="Tecnologias e foco">
-                  <span class="tag">Spring</span>
-                  <span class="tag">React</span>
-                  <span class="tag">REST</span>
-                </div>
-
-                <div class="project-actions">
-                  <a class="btn small" href="/projetos/dscommerce/">Ver case</a>
-                  <a class="btn small ghost" href="/links/">Links</a>
-                </div>
-              </article>
-
-              <!-- 3) DSCatalog (foco em testes) -->
-              <article class="project">
-                <a
-                  class="project-cover"
-                  href="/projetos/dscatalog/"
-                  aria-label="Ver case do DSCatalog"
-                >
-                  <img
-                    src="assets/img/projects/dscatalog.png"
-                    alt="Preview do projeto DSCatalog"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </a>
-
-                <div class="project-top">
-                  <h3 class="h3">
-                    <a class="project-title" href="/projetos/dscatalog/"
-                      >DSCatalog</a
-                    >
-                  </h3>
-                  <span class="badge">Testes</span>
-                </div>
-
-                <p class="muted">
-                  Backend com foco em testes automatizados, qualidade e boas
-                  práticas.
-                </p>
-
-                <div class="tags" aria-label="Tecnologias e foco">
-                  <span class="tag">JUnit</span>
-                  <span class="tag">Mockito</span>
-                  <span class="tag">Spring</span>
-                </div>
-
-                <div class="project-actions">
-                  <a class="btn small" href="/projetos/dscatalog/">Ver case</a>
-                  <a class="btn small ghost" href="/links/">Links</a>
-                </div>
-              </article>
-
-              <!-- 4) Portfólio (Guanabara) -->
-              <article class="project">
-                <a
-                  class="project-cover"
-                  href="/projetos/portfolio-guanabara/"
-                  aria-label="Ver case do Portfólio (HTML, CSS e JS)"
-                >
-                  <img
-                    src="assets/img/projects/portfolio-guanabara.png"
-                    alt="Preview do projeto Portfólio (HTML, CSS e JavaScript)"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </a>
-
-                <div class="project-top">
-                  <h3 class="h3">
-                    <a
-                      class="project-title"
-                      href="/projetos/portfolio-guanabara/"
-                      >Portfólio (Curso em Vídeo)</a
-                    >
-                  </h3>
-                  <span class="badge">Frontend</span>
-                </div>
-
-                <p class="muted">
-                  Site completo em HTML, CSS e JavaScript, com foco em layout e
-                  responsividade.
-                </p>
-
-                <div class="tags" aria-label="Tecnologias e foco">
-                  <span class="tag">HTML</span>
-                  <span class="tag">CSS</span>
-                  <span class="tag">JavaScript</span>
-                </div>
-
-                <div class="project-actions">
-                  <a class="btn small" href="/projetos/portfolio-guanabara/"
-                    >Ver case</a
-                  >
-                  <a class="btn small ghost" href="/links/">Demo</a>
-                </div>
-              </article>
-
-              <!-- 5) FinanceFlow (em evolução) -->
-              <article class="project">
-                <a
-                  class="project-cover"
-                  href="/projetos/financeflow/"
-                  aria-label="Ver case do FinanceFlow"
-                >
-                  <img
-                    src="assets/img/projects/financeflow.png"
-                    alt="Preview do projeto FinanceFlow"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </a>
-
-                <div class="project-top">
-                  <h3 class="h3">
-                    <a class="project-title" href="/projetos/financeflow/"
-                      >FinanceFlow</a
-                    >
-                  </h3>
-                  <span class="badge">Em evolução</span>
-                </div>
-
-                <p class="muted">
-                  Controle financeiro com organização de dados e relatórios
-                  (fase inicial).
-                </p>
-
-                <div class="tags" aria-label="Tecnologias e foco">
-                  <span class="tag">Dados</span>
-                  <span class="tag">Python</span>
-                  <span class="tag">Automação</span>
-                </div>
-
-                <div class="project-actions">
-                  <a class="btn small" href="/projetos/financeflow/"
-                    >Ver case</a
-                  >
-                  <a class="btn small ghost" href="/links/">Links</a>
-                </div>
-              </article>
-            </div>
-
-            <div class="cta-row">
-              <a class="btn primary" href="/contato/">Vamos conversar</a>
-              <a class="btn ghost" href="/curriculo/">Ver currículo</a>
-            </div>
-          </div>
-        </section>
-
-        <!-- BLOG -->
-        <section class="section" aria-labelledby="blog-title">
-          <div class="container">
-            <div class="section-head">
-              <h2 class="h2" id="blog-title">Blog</h2>
-              <a class="link" href="/blog/">Ver blog →</a>
-            </div>
-
-            <div class="posts">
-
-              <article class="post">
-                <a
-                  class="post-cover"
-                  href="/blog/oop-modelagem-de-sistemas/"
-                  aria-label="Ler artigo: Programação Orientada a Objetos Não É Sobre Classes"
-                >
-                  <img
-                    src="assets/img/blog/oop-modelagem-capa.png"
-                    alt="Capa do artigo: Programação Orientada a Objetos não é sobre classes — é sobre modelar sistemas"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </a>
-
-                <h3 class="h3">
-                  Programação Orientada a Objetos Não É Sobre Classes
-                </h3>
-
-                <p class="muted">
-                  POO é menos sobre sintaxe e mais sobre modelar sistemas com comportamento, coesão e responsabilidade.
-                </p>
-
-                <div class="post-meta muted">Mar 2026 • POO</div>
-
-                <a class="link" href="/blog/oop-modelagem-de-sistemas/">Ler →</a>
-              </article>
-              <article class="post">
-                <a
-                  class="post-cover"
-                  href="/blog/recomecar-na-ti-base-tecnica/"
-                  aria-label="Ler artigo: Recomeçar na TI depois dos 40: base técnica"
-                >
-                  <img
-                    src="assets/img/blog/base-tecnica-capa.png"
-                    alt="Capa do artigo: Recomeçar na TI depois dos 40 — base técnica"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </a>
-
-                <h3 class="h3">
-                  Recomeçar na TI depois dos 40: base técnica > stack
-                </h3>
-
-                <p class="muted">
-                  Fundamentos que sustentam qualquer stack: lógica, OO,
-                  HTTP/REST e SQL.
-                </p>
-
-                <div class="post-meta muted">Fev 2026 • Fundamentos</div>
-
-                <a class="link" href="/blog/recomecar-na-ti-base-tecnica/"
-                  >Ler →</a
-                >
-              </article>
-              
-              <article class="post">
-                <a
-                  class="post-cover"
-                  href="blog/Recomeçar na TI depois dos 40/index.html"
-                  aria-label="Ler artigo: Recomeçar na TI depois dos 40"
-                >
-                  <img
-                    src="assets/img/blog/recomecar-ti-40-capa.png"
-                    alt="Capa do artigo: Recomeçar na TI depois dos 40"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </a>
-
-                <h3 class="h3">Recomeçar na TI depois dos 40</h3>
-
-                <p class="muted">
-                  Uma jornada real sobre expectativa, frustração, base técnica e
-                  o que sustenta a transição.
-                </p>
-
-                <div class="post-meta muted">Jan 2026 • Carreira</div>
-
-                <a
-                  class="link"
-                  href="blog/Recomeçar na TI depois dos 40/index.html"
-                  >Ler →</a
-                >
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <!-- REDES (deixa, mas discreto) -->
-        <section class="section" aria-labelledby="redes-title">
-          <div class="container">
-            <h2 class="h2" id="redes-title">Minhas redes</h2>
-            <p class="muted">Acompanhe projetos e conteúdo.</p>
-            <div class="social-grid">
-              <a
-                class="social"
-                href="https://www.linkedin.com/in/andre-blos-aliatti-3a680b59/"
-                target="_blank"
-                rel="noreferrer"
-                ><wa-icon name="square-linkedin" family="brands"></wa-icon>
-                LinkedIn</a
-              >
-              <a
-                class="social"
-                href="https://github.com/andreblosaliatti"
-                target="_blank"
-                rel="noreferrer"
-                ><wa-icon name="github" family="brands"></wa-icon> GitHub</a
-              >
-              <a
-                class="social"
-                href="https://www.youtube.com/@andreblosaliatti"
-                target="_blank"
-                rel="noreferrer"
-                ><wa-icon name="youtube" family="brands"></wa-icon> YouTube</a
-              >
-              <a
-                class="social"
-                href="https://www.instagram.com/andreblosaliatti.dev/"
-                target="_blank"
-                rel="noreferrer"
-                ><wa-icon name="instagram" family="brands"></wa-icon>
-                Instagram</a
-              >
-              <a
-                class="social"
-                href="https://medium.com/@andre.blos.aliatti.dev"
-                target="_blank"
-                rel="noreferrer"
-                ><wa-icon name="code"></wa-icon> Medium</a
-              >
-              <a
-                class="social"
-                href="https://dev.to/andre_blos_aliatti"
-                target="_blank"
-                rel="noreferrer"
-                ><wa-icon name="dev" family="brands"></wa-icon> Dev.to</a
-              >
-              <a class="social" href="/links/" target="_blank" rel="noreferrer"
-                ><wa-icon name="x"></wa-icon
-              ></a>
-            </div>
-          </div>
-        </section>
-        <!-- CTA FINAL -->
-        <section class="section" aria-labelledby="contato-title">
-          <div class="container">
-            <h2 class="h2" id="contato-title">Vamos conversar?</h2>
-            <p class="muted">
-              Quer trocar uma ideia sobre um projeto ou oportunidade?
-            </p>
-            <div class="cta-row">
-              <a class="btn primary" href="/contato/">Entrar em contato</a>
-            </div>
-          </div>
-        </section>
-      </main>
-      <footer class="footer">
-        <div class="container footer-inner">
-          <p>© <span id="year"></span> André Blos Aliatti</p>
+      <nav class="nav-panel" id="navPanel" hidden>
+        <div class="container nav-inner">
+          <a class="nav-link" href="/">Início</a>
+          <a class="nav-link" href="/quem-e-andre-blos-aliatti/"
+            >Quem é André Blos Aliatti</a
+          >
+          <a class="nav-link" href="/projetos-andre-blos-aliatti/">Projetos</a>
+          <a class="nav-link" href="/jornada-recomecar-ti-depois-dos-40/"
+            >Jornada</a
+          >
+          <a class="nav-link" href="/blog/">Blog</a>
+          <a class="nav-link" href="/medicflow/">MedicFlow</a>
+          <a class="nav-link nav-cta" href="/contato/">Contato</a>
         </div>
-      </footer>
-      <script src="/js/app.js"></script>
-    </div>
+      </nav>
+    </header>
+
+    <main id="conteudo" class="main">
+      <section class="section hero">
+        <div class="container">
+          <h1 class="h1">André Blos Aliatti — Desenvolvedor Backend Java</h1>
+          <p class="lead">
+            Esta página é o hub da presença digital de André Blos Aliatti.
+            Aqui você encontra trajetória profissional, projetos aplicados,
+            conteúdo técnico e visão de produto, com foco em backend Java e
+            engenharia de software.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="quem-e-home-title">
+        <div class="container">
+          <h2 class="h2" id="quem-e-home-title">Quem é André Blos Aliatti</h2>
+          <p>
+            André Blos Aliatti é desenvolvedor backend Java em transição
+            estruturada para tecnologia, com foco em construir sistemas que
+            resolvem problemas reais de negócio. A base da atuação combina
+            estudo contínuo, prática em projetos e preocupação com qualidade de
+            arquitetura.
+          </p>
+          <p>
+            A jornada de André Blos Aliatti na TI é marcada por maturidade de
+            carreira: menos improviso, mais processo e responsabilidade técnica.
+            Esse posicionamento aparece tanto no trabalho com APIs quanto na
+            organização de domínio, modelagem de dados e evolução incremental.
+          </p>
+          <p>
+            Se você quiser uma visão completa da história, acesse
+            <a class="link" href="/quem-e-andre-blos-aliatti/"
+              >Quem é André Blos Aliatti</a
+            >
+            e também a
+            <a class="link" href="/jornada-recomecar-ti-depois-dos-40/"
+              >jornada de André Blos Aliatti na TI</a
+            >.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="bloco-tecnico-title">
+        <div class="container">
+          <h2 class="h2" id="bloco-tecnico-title">
+            André Blos Aliatti desenvolvedor backend Java: foco técnico
+          </h2>
+          <p>
+            O posicionamento técnico de André Blos Aliatti é claro: backend com
+            Java e Spring Boot para construir APIs REST robustas, seguras e
+            evolutivas. O uso de PostgreSQL dá sustentação para integridade de
+            dados, consultas confiáveis e crescimento progressivo da aplicação.
+          </p>
+          <p>
+            Além do código, André Blos Aliatti trabalha arquitetura em camadas,
+            organização de responsabilidades e documentação para facilitar
+            manutenção. Esse conjunto reduz retrabalho e acelera evolução em
+            projetos que precisam durar.
+          </p>
+          <p>
+            Veja o detalhamento técnico em
+            <a class="link" href="/andre-blos-aliatti-desenvolvedor-backend-java/"
+              >André Blos Aliatti Desenvolvedor Backend Java</a
+            >
+            e acompanhe artigos no <a class="link" href="/blog/">blog</a>.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="bloco-projetos-title">
+        <div class="container">
+          <h2 class="h2" id="bloco-projetos-title">
+            Projetos de André Blos Aliatti com contexto real
+          </h2>
+          <p>
+            Os projetos de André Blos Aliatti não são só vitrines visuais. Cada
+            entrega é apresentada com problema de negócio, decisão técnica,
+            tecnologias usadas e papel executado. Isso reforça autoridade
+            prática e facilita a avaliação de escopo por quem busca parceria ou
+            contratação.
+          </p>
+          <p>
+            O destaque atual é o <a class="link" href="/medicflow/">MedicFlow</a>,
+            plataforma de gestão clínica com visão de produto e evolução
+            contínua. Também há projetos de estudo aplicado que consolidam base
+            em Java, Spring, modelagem e integração frontend/backend.
+          </p>
+          <p>
+            Explore a página
+            <a class="link" href="/projetos-andre-blos-aliatti/"
+              >Projetos de André Blos Aliatti</a
+            >,
+            leia conteúdos no <a class="link" href="/blog/">blog</a> e fale comigo
+            em <a class="link" href="/contato/">contato</a> para discutir novas
+            soluções.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="areas-estrategicas-title">
+        <div class="container">
+          <h2 class="h2" id="areas-estrategicas-title">
+            Áreas estratégicas do site
+          </h2>
+          <div class="cards">
+            <article class="card">
+              <h3 class="h3">
+                <a class="project-title" href="/quem-e-andre-blos-aliatti/"
+                  >Quem é André Blos Aliatti e como foi sua transição para a
+                  tecnologia</a
+                >
+              </h3>
+              <p class="muted">
+                Contexto completo de carreira, visão profissional e fundamentos
+                que sustentam o trabalho técnico.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3 class="h3">
+                <a class="project-title" href="/projetos-andre-blos-aliatti/"
+                  >Projetos de André Blos Aliatti em Java e engenharia de
+                  software</a
+                >
+              </h3>
+              <p class="muted">
+                Casos com problema, solução, stack e papel técnico em cada
+                projeto.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3 class="h3">
+                <a class="project-title" href="/jornada-recomecar-ti-depois-dos-40/"
+                  >Jornada de André Blos Aliatti na TI depois dos 40</a
+                >
+              </h3>
+              <p class="muted">
+                Relato estratégico sobre estudo, execução, erros, ajustes e
+                amadurecimento profissional.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3 class="h3">
+                <a class="project-title" href="/medicflow/"
+                  >MedicFlow plataforma médica criada por André Blos Aliatti</a
+                >
+              </h3>
+              <p class="muted">
+                Produto com foco em gestão clínica, arquitetura escalável e
+                evolução de funcionalidades.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3 class="h3">
+                <a class="project-title" href="/blog/"
+                  >Blog de André Blos Aliatti sobre backend Java e carreira</a
+                >
+              </h3>
+              <p class="muted">
+                Artigos com base técnica, modelagem de sistemas e decisões de
+                trajetória na tecnologia.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3 class="h3">
+                <a class="project-title" href="/contato/"
+                  >Contato com André Blos Aliatti para projetos e parcerias</a
+                >
+              </h3>
+              <p class="muted">
+                Canal para conversas sobre novas demandas em backend Java,
+                produtos web e evolução de sistemas.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> André Blos Aliatti</p>
+        <p class="footer-seo">
+          André Blos Aliatti desenvolvedor backend Java com foco em projetos reais,
+          arquitetura de software e conteúdo técnico aplicável.
+        </p>
+        <div class="footer-links" aria-label="Links estratégicos">
+          <a class="link" href="/andre-blos-aliatti-desenvolvedor-backend-java/">André Blos Aliatti desenvolvedor backend Java</a>
+          <a class="link" href="/projetos-andre-blos-aliatti/">Projetos Java</a>
+          <a class="link" href="/jornada-recomecar-ti-depois-dos-40/">Recomeçar na TI depois dos 40</a>
+          <a class="link" href="/medicflow/">MedicFlow plataforma médica</a>
+          <a class="link" href="/blog/">Blog</a>
+          <a class="link" href="/contato/">Contato</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
   </body>
 </html>
